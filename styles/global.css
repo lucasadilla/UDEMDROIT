@@ -93,3 +93,46 @@ nav a {
 .mb-8 {
     margin-bottom: 2rem;
 }
+
+/* styles/globals.css */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+/* styles/globals.css */
+.article-card {
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.heart-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}

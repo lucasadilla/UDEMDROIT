@@ -7,22 +7,22 @@ export default function Navbar() {
             <ul className="flex justify-around">
                 <li>
                     <Link href="/">
-                        <span className="text-white">Accueil</span>
+                        <span className="nav-link">Accueil</span>
                     </Link>
                 </li>
                 <li>
                     <Link href="/blog">
-                        <span className="text-white">Blog</span>
+                        <span className="nav-link">Blog</span>
                     </Link>
                 </li>
                 <li>
                     <Link href="/contact">
-                        <span className="text-white">Contact</span>
+                        <span className="nav-link">Contact</span>
                     </Link>
                 </li>
                 <li>
                     <Link href="/notre-comite">
-                        <span className="text-white">Notre Comité</span>
+                        <span className="nav-link">Notre Comité</span>
                     </Link>
                 </li>
             </ul>
