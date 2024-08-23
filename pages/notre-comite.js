@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 
 const members = [
-    { name: "Élie Legault", title: "VP Chercheuse", image: "/images/elie.png" },
+    { name: "Élie Legault", title: "VP Chercheuse", image: "/images/bbg.jpeg" },
     { name: "Kiana Salesian-Zanjani", title: "VP Communications", image: "/images/Kiana.png" },
     { name: "Florence Richard", title: "Trésorière", image: "/images/Florence.png" },
     { name: "Marie-Laurence Desmarais", title: "VP Affaires Externes", image: "/images/Marie-Laurence.png" },

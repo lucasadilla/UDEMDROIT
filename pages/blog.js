@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 
 const articles = [
     {
+        id: 1,
         title: 'First Article',
         image: '/images/article1.jpg',
         author: 'John Doe',
@@ -12,6 +13,7 @@ const articles = [
         date: 'January 1, 2023',
     },
     {
+        id: 2,
         title: 'Second Article',
         image: '/images/article2.jpg',
         author: 'Jane Smith',

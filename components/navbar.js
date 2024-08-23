@@ -25,6 +25,11 @@ export default function Navbar() {
                         <span className="nav-link">Notre Comité</span>
                     </Link>
                 </li>
+                <li>
+                    <Link href="/sponsor">
+                        <span className="nav-link">Sponsor's Guide</span>
+                    </Link>
+                </li>
             </ul>
         </nav>
     );
