@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const members = [
     { name: "Élie Legault", title: "VP Chercheuse", image: "/images/bbg.jpeg" },
@@ -26,6 +27,7 @@ export default function NotreComite() {
                     ))}
                 </div>
             </main>
+            <Footer />
         </div>
     );
 }
