@@ -31,6 +31,10 @@ export default function ArticleCard({ id }) {
                     <p className="text-sm text-gray-600">{article.date}</p>
                 </div>
             </div>
+            <p className="mt-4">{article.content.substring(0, 100)}...</p>
+            <Link href={`/article/${id}`} legacyBehavior>
+                <a className="text-blue-500 hover:underline">Read more</a>
+            </Link>
             <button onClick={toggleHeart} className="heart-button absolute top-4 right-4">
                 {hearted ? '❤️' : '🤍'}
             </button>
