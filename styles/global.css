@@ -132,6 +132,14 @@ nav a {
 }
 
 /* styles/globals.css */
+.bg-white {
+    background-color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
+}
+
 .logo {
     width: 40px;
     height: 40px;
@@ -143,7 +151,6 @@ nav a {
 }
 
 .nav-link {
-    color: white;
     text-decoration: none;
     font-size: 1rem;
 }
@@ -155,7 +162,7 @@ nav a {
 .nav-link {
     position: relative;
     display: inline-block;
-    color: white;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -167,7 +174,7 @@ nav a {
     display: block;
     margin-top: 5px;
     right: 0;
-    background: white;
+    background: #000000;
     transition: width 0.4s ease;
     -webkit-transition: width 0.4s ease;
 }
@@ -175,7 +182,7 @@ nav a {
 .nav-link:hover::after {
     width: 100%;
     left: 0;
-    background: white;
+    background: #000000;
 }
 
 /* styles/globals.css */
@@ -203,7 +210,7 @@ input[type="email"] {
 
 button[type="submit"] {
     padding: 0.5rem 1rem;
-    background-color: #4f46e5;
+    background-color: #c9c7ea;
     color: white;
     border: none;
     border-radius: 0 0.25rem 0.25rem 0;
@@ -211,7 +218,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #4338ca;
+    background-color: #000000;
 }
 
 /* styles/globals.css */

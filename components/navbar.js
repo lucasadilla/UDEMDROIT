@@ -3,33 +3,33 @@ import Link from 'next/link';
 
 export default function Navbar() {
     return (
-        <nav className="bg-gray-800 p-4 flex justify-between items-center">
+        <nav className="bg-white p-4 flex justify-between items-center">
             <div className="flex items-center">
                 <img src="/images/logo.png" alt="Logo" className="logo w-10 h-10 mr-4" />
                 <ul className="flex space-x-4">
                     <li>
                         <Link href="/">
-                            <span className="nav-link">Accueil</span>
+                            <span className="nav-link text-black">Accueil</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/blog">
-                            <span className="nav-link">Blog</span>
+                            <span className="nav-link text-black">Blog</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact">
-                            <span className="nav-link">Contact</span>
+                            <span className="nav-link text-black">Contact</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/notre-comite">
-                            <span className="nav-link">Notre Comité</span>
+                            <span className="nav-link text-black">Notre Comité</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/sponsor">
-                            <span className="nav-link">Guide du Sponsor</span>
+                            <span className="nav-link text-black">Guide du Sponsor</span>
                         </Link>
                     </li>
                 </ul>
