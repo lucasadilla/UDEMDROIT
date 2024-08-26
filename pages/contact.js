@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 
+
+
 export default function Contact() {
     const [email, setEmail] = useState('');
 
@@ -13,7 +15,7 @@ export default function Contact() {
     };
 
     return (
-        <div>
+        <div className="container mx-auto p-4">
             <Navbar />
             <main className="p-8 flex flex-col items-center">
                 <h1 className="text-4xl mb-4">NOUS CONTACTER</h1>

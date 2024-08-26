@@ -45,7 +45,7 @@ export default function SponsorsPage() {
         <div>
             <Navbar />
             <main className="p-8">
-                <h1 className="text-4xl text-center mb-8">Our Sponsors</h1>
+                <h1 className="text-4xl text-center mb-8">Guide du Sponsor</h1>
                 <div className="sponsors-grid">
                     <Sponsor sponsor={sponsors[0]} onClick={openModal} />
                 </div>
