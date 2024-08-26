@@ -1,6 +1,8 @@
 import { ArticlesProvider, useArticles } from '../context/ArticlesContext';
 import ArticleCard from '../components/ArticleCard';
 import Navbar from "../components/navbar";
+import Footer from '../components/Footer';
+
 
 export default function Blog() {
     const { articles } = useArticles();
@@ -14,6 +16,7 @@ export default function Blog() {
                     <ArticleCard key={article.id} id={article.id} />
                 ))}
             </div>
+            <Footer />
         </div>
     );
 }

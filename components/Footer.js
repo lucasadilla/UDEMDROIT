@@ -7,7 +7,7 @@ export default function Footer() {
                 <a href="https://www.instagram.com/femmesetdroit/" target="_blank" rel="noopener noreferrer">
                     <img src="/images/insta.png" alt="Instagram" className="instagram-icon" />
                 </a>
-                <p className="email">contact@example.com</p>
+                <p className="email">femmesetdroit.udem@gmail.com</p>
             </div>
         </footer>
     );

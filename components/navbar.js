@@ -5,9 +5,11 @@ export default function Navbar() {
     return (
         <nav className="bg-white p-4 flex justify-between items-center">
             <div className="flex items-center">
-                <img src="/images/logo.png" alt="Logo" className="logo w-10 h-10 mr-4" />
+                <a href="/">
+                    <img src="/images/logo.png" alt="Logo" className="logo w-10 h-10 mr-4"/>
+                </a>
                 <ul className="flex space-x-4">
-                    <li>
+                <li>
                         <Link href="/">
                             <span className="nav-link text-black">Accueil</span>
                         </Link>
@@ -35,7 +37,7 @@ export default function Navbar() {
                 </ul>
             </div>
             <a href="https://www.instagram.com/femmesetdroit/" target="_blank" rel="noopener noreferrer">
-                <img src="/images/insta.png" alt="Instagram" className="instagram-icon w-8 h-8" />
+                <img src="/images/insta.png" alt="Instagram" className="instagram-icon w-8 h-8"/>
             </a>
         </nav>
     );

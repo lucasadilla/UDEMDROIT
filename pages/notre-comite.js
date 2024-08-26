@@ -3,12 +3,12 @@ import Footer from '../components/Footer';
 
 const members = [
     { name: "Élie Legault", title: "VP Chercheuse", image: "/images/bbg.jpeg" },
-    { name: "Kiana Salesian-Zanjani", title: "VP Communications", image: "/images/Kiana.png" },
-    { name: "Florence Richard", title: "Trésorière", image: "/images/Florence.png" },
-    { name: "Marie-Laurence Desmarais", title: "VP Affaires Externes", image: "/images/Marie-Laurence.png" },
-    { name: "Camila Quiroga Sanchez", title: "Secrétaire générale", image: "/images/Camila.png" },
-    { name: "Leelou Rouxel", title: "VP Évènements", image: "/images/Leelou.png" },
-    { name: "Victoria Hum", title: "Présidente", image: "/images/Victoria.png" }
+    { name: "Kiana Salesian-Zanjani", title: "VP Communications", image: "/images/bbg.jpeg" },
+    { name: "Florence Richard", title: "Trésorière", image: "/images/bbg.jpeg" },
+    { name: "Marie-Laurence Desmarais", title: "VP Affaires Externes", image: "/images/bbg.jpeg" },
+    { name: "Camila Quiroga Sanchez", title: "Secrétaire générale", image: "/images/bbg.jpeg" },
+    { name: "Leelou Rouxel", title: "VP Évènements", image: "/images/bbg.jpeg" },
+    { name: "Victoria Hum", title: "Présidente", image: "/images/bbg.jpeg" }
 ];
 
 export default function NotreComite() {

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Sponsor from '../components/Sponsors';
 import SponsorModal from '../components/SponsorModal';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const sponsors = [
     { id: 1, name: 'Cover Photo', image: '/images/sponsors/Page titre.png' },
@@ -21,7 +22,8 @@ export default function SponsorsPage() {
     const [selectedSponsor, setSelectedSponsor] = useState(sponsors[0]);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => {
+    const openModal = (sponsor) => {
+        setSelectedSponsor(sponsor);
         setIsModalOpen(true);
     };
 
@@ -47,7 +49,9 @@ export default function SponsorsPage() {
             <main className="p-8">
                 <h1 className="text-4xl text-center mb-8">Guide du Sponsor</h1>
                 <div className="sponsors-grid">
-                    <Sponsor sponsor={sponsors[0]} onClick={openModal} />
+                    {sponsors.map(sponsor => (
+                        <Sponsor key={sponsor.id} sponsor={sponsor} onClick={() => openModal(sponsor)} />
+                    ))}
                 </div>
                 {isModalOpen && (
                     <SponsorModal
@@ -55,9 +59,12 @@ export default function SponsorsPage() {
                         onClose={closeModal}
                         onNext={nextSponsor}
                         onPrev={prevSponsor}
+                        currentPage={sponsors.findIndex(s => s.id === selectedSponsor.id) + 1}
+                        totalPages={sponsors.length}
                     />
                 )}
             </main>
+            <Footer />
         </div>
     );
 }
