@@ -25,7 +25,7 @@ export default function ArticleCard({ id }) {
                 </a>
             </Link>
             <div className="flex items-center mt-2">
-                <Image src={article.authorImage} alt={article.author} width={40} height={40} className="rounded-full" />
+                <Image src={article.authorImage} alt={article.author} width={40} height={40} className="author-image" />
                 <div className="ml-2">
                     <p className="text-sm font-semibold">{article.author}</p>
                     <p className="text-sm text-gray-600">{article.date}</p>

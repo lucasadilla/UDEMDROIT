@@ -3,45 +3,93 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-
 export default function Contact() {
-    const [email, setEmail] = useState('');
+    const [formData, setFormData] = useState({
+        nom: '',
+        email: '',
+        objet: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Email submitted:', email);
-        // Here you can add code to send the email to your backend service
-        setEmail('');
+        // Handle form submission logic here
     };
 
     return (
         <div>
-            <Navbar />
-            <main className="p-8 flex flex-col items-center">
-                <h1 className="text-4xl mb-4">NOUS CONTACTER</h1>
-                <p className="text-xl mb-2">2900 Bd Édouard-Montpetit, Montréal, QC H3T 1J4</p>
-                <p className="text-lg">femmesetdroit.udem@gmail.com</p>
-                <form onSubmit={handleSubmit} className="mt-8 w-full max-w-sm">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Join our mailing list</label>
-                    <div className="mt-1 flex rounded-md shadow-sm">
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            className="flex-1 block w-full rounded-none rounded-l-md sm:text-sm border-gray-300"
-                            placeholder="you@example.com"
-                        />
-                        <button
-                            type="submit"
-                            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-r-md text-white bg-indigo-600 hover:bg-indigo-700"
-                        >
-                            Subscribe
-                        </button>
+            <div>
+                <Navbar />
+            </div>
+            <div className="contact-page p-8">
+                <div className="flex">
+                    <div className="w-1/2 pr-8">
+                        <h2 className="text-2xl font-bold mb-4">NOUS CONTACTER</h2>
+                        <p>2900 Bd Édouard-Montpetit, Montréal, QC H3T 1J4</p>
+                        <p>femmesetdroit.udem@gmail.com</p>
                     </div>
-                </form>
-            </main>
+                    <div className="w-1/2">
+                        <form onSubmit={handleSubmit} className="contact-form">
+                            <div className="mb-4">
+                                <label htmlFor="nom" className="block text-sm font-semibold mb-2">Nom</label>
+                                <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    value={formData.nom}
+                                    onChange={handleChange}
+                                    className="w-full p-2 border rounded"
+                                    placeholder="Votre nom"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label htmlFor="email" className="block text-sm font-semibold mb-2">E-mail</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className="w-full p-2 border rounded"
+                                    placeholder="Votre e-mail"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label htmlFor="objet" className="block text-sm font-semibold mb-2">Objet</label>
+                                <input
+                                    type="text"
+                                    id="objet"
+                                    name="objet"
+                                    value={formData.objet}
+                                    onChange={handleChange}
+                                    className="w-full p-2 border rounded"
+                                    placeholder="Objet de votre message"
+                                />
+                            </div>
+                            <div className="mb-4">
+                                <label htmlFor="message" className="block text-sm font-semibold mb-2">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    className="w-full p-2 border rounded"
+                                    placeholder="Votre message"
+                                />
+                            </div>
+                            <button type="submit" className="bg-blue-500 text-white p-2 rounded">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <Footer />
         </div>
     );
