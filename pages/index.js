@@ -1,6 +1,7 @@
 // pages/index.js
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ContactCard from '../components/ContactCard';
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                         <h2 className="text-4xl text-center text-white mt-4">Promouvoir le féminisme intersectionnel par la recherche et la sensibilisation</h2>
                     </div>
                 </div>
+                <ContactCard />
             </main>
             <Footer />
         </div>
