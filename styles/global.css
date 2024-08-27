@@ -48,7 +48,7 @@
 
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Corbel', serif;
     margin: 0;
     padding: 0;
 }
@@ -161,9 +161,6 @@ nav a {
     font-size: 1rem;
 }
 
-.nav-link:hover {
-    text-decoration: underline;
-}
 
 .nav-link {
     position: relative;

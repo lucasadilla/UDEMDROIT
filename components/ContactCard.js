@@ -17,9 +17,25 @@ export default function ContactCard() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                alert('Email sent successfully');
+            } else {
+                alert('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('An error occurred while sending the email');
+        }
     };
 
     return (
@@ -45,7 +61,7 @@ export default function ContactCard() {
                             />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-sm font-semibold mb-2">E-mail</label>
+                            <label htmlFor="email" className="block text-sm font-semibold mb-2">Courriel</label>
                             <input
                                 type="email"
                                 id="email"
@@ -53,7 +69,7 @@ export default function ContactCard() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 className="w-full p-2 border rounded"
-                                placeholder="Votre e-mail"
+                                placeholder="Votre Courriel"
                             />
                         </div>
                         <div className="mb-4">
