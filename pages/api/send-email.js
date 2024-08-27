@@ -10,8 +10,8 @@ export default async function handler(req, res) {
             port: 587, // Replace with your SMTP port
             secure: false, // true for 465, false for other ports
             auth: {
-                user: 'lucas.pentlandhyde@gmail.com', // Replace with your SMTP username
-                pass: 'eiaa rrit ydxs avyr', // Replace with your SMTP password
+                user: process.env.SMTP_USER, // Replace with your SMTP username
+                pass: process.env.SMTP_PASS, // Replace with your SMTP password
             },
         });
 
