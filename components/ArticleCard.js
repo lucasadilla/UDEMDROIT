@@ -1,11 +1,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useArticles } from '../context/ArticlesContext';
 
-export default function ArticleCard({ id }) {
-    const { articles } = useArticles();
-    const article = articles.find(article => article.id === id);
+export default function ArticleCard({ article, isLarge }) {
     const [hearted, setHearted] = useState(false);
 
     const toggleHeart = () => {
@@ -17,8 +14,8 @@ export default function ArticleCard({ id }) {
     }
 
     return (
-        <div className="article-card p-4 border rounded-lg shadow-md relative">
-            <Link href={`/article/${id}`} legacyBehavior>
+        <div className={`article-card p-4 border rounded-lg shadow-md relative ${isLarge ? 'large-article-card' : ''}`}>
+            <Link href={`/article/${article.id}`} legacyBehavior>
                 <a>
                     <Image src={article.image} alt={article.title} width={600} height={400} className="rounded-lg" />
                     <h2 className="text-2xl font-bold mt-4">{article.title}</h2>

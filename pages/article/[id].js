@@ -1,6 +1,7 @@
 // pages/article/[id].js
 import { useRouter } from 'next/router';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { useArticles } from '../../context/ArticlesContext';
 import Image from 'next/image';
 
@@ -33,7 +34,7 @@ export default function Article() {
     return (
         <div>
             <Navbar />
-            <main className="article-page">
+            <main className="article-page article-box">
                 <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
                 <div className="flex items-center mb-4">
                     <Image src={article.authorImage} alt={article.author} width={40} height={40} className="author-image" />
@@ -43,8 +44,9 @@ export default function Article() {
                     </div>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
-                <button onClick={handleShare} className="mt-4 p-2 bg-blue-500 text-white rounded">Share this article</button>
+                <button onClick={handleShare} className="share-button">Share this article</button>
             </main>
+            <Footer/>
         </div>
     );
 }
