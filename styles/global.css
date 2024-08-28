@@ -440,9 +440,13 @@ button[type="submit"]:hover {
 
 .contact-form input,
 .contact-form textarea {
-    max-width: 400px; /* Set a maximum width */
-    width: 100%; /* Ensure it takes full width up to the max-width */
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    padding: 0.5rem 0; /* Adjust padding to match the new style */
+    width: 70%;
     margin: 0 auto; /* Center the text boxes */
+    box-sizing: border-box;
 }
 
 .contact-form textarea:last-of-type {
