@@ -1,4 +1,4 @@
-// pages/sponsors.js
+// pages/sponsor.js
 import React, { useState } from 'react';
 import Sponsor from '../components/Sponsors';
 import SponsorModal from '../components/SponsorModal';
@@ -48,10 +48,12 @@ export default function SponsorsPage() {
             <Navbar />
             <main className="p-8">
                 <h1 className="text-4xl text-center mb-8">Guide du Sponsor</h1>
-                <div className="sponsors-grid">
-                    {sponsors.map(sponsor => (
-                        <Sponsor key={sponsor.id} sponsor={sponsor} onClick={() => openModal(sponsor)} />
-                    ))}
+                <div className="sponsor-box">
+                    <div className="sponsors-grid">
+                        {sponsors.map(sponsor => (
+                            <Sponsor key={sponsor.id} sponsor={sponsor} onClick={() => openModal(sponsor)} />
+                        ))}
+                    </div>
                 </div>
                 {isModalOpen && (
                     <SponsorModal
