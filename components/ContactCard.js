@@ -1,7 +1,7 @@
 // components/ContactCard.js
 import { useState } from 'react';
 
-export default function ContactCard() {
+export default function ContactCard({ leftContent, rightContent }) {
     const [formData, setFormData] = useState({
         nom: '',
         email: '',
@@ -40,13 +40,13 @@ export default function ContactCard() {
 
     return (
         <div className="contact-page p-8">
-            <div className="flex">
-                <div className="w-1/2 pr-8">
+            <div className="contact-card">
+                <div className="left-side">
                     <h2 className="text-2xl font-bold mb-4">NOUS CONTACTER</h2>
                     <p>2900 Bd Édouard-Montpetit, Montréal, QC H3T 1J4</p>
                     <p>femmesetdroit.udem@gmail.com</p>
                 </div>
-                <div className="w-1/2">
+                <div className="right-side">
                     <form onSubmit={handleSubmit} className="contact-form">
                         <div className="mb-4">
                             <label htmlFor="nom" className="block text-sm font-semibold mb-2">Nom</label>
