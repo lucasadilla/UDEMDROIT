@@ -15,6 +15,10 @@ export default function Article() {
         return <p>Article not found</p>;
     }
 
+    const handleBack = () => {
+        router.back();
+    };
+
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
@@ -41,6 +45,7 @@ export default function Article() {
         <div>
             <Navbar />
             <main className="article-page article-box">
+                <button onClick={handleBack} className="back-button">← Back</button>
                 <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
                 <div className="flex items-center mb-4">
                     <Image src={article.authorImage} alt={article.author} width={40} height={40} className="author-image" />
