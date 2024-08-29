@@ -1,9 +1,9 @@
-// pages/article/[id].js
 import { useRouter } from 'next/router';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { useArticles } from '../../context/ArticlesContext';
 import Image from 'next/image';
+import ImageCarouselCard from '../../components/ImageCarouselCard';
 
 export default function Article() {
     const router = useRouter();
@@ -31,6 +31,12 @@ export default function Article() {
         }
     };
 
+    const images = [
+        '/images/blogs/jour/1.png',
+        '/images/blogs/jour/2.png',
+        '/images/blogs/jour/3.png',
+    ];
+
     return (
         <div>
             <Navbar />
@@ -44,6 +50,7 @@ export default function Article() {
                     </div>
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
+                {article.id === 2 && <ImageCarouselCard images={images} />}
                 <button onClick={handleShare} className="share-button">Share this article</button>
             </main>
             <Footer/>
