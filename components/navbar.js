@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav className="bg-white p-4 flex justify-between items-center">
             <div className="flex items-center">
                 <a href="/">
-                    <img src="/images/logo.png" alt="Logo" className="logo w-10 h-10 mr-4"/>
+                    <img src="/images/logo femme et droit-Photoroom.png" alt="Logo" className="logo w-10 h-10 mr-4"/>
                 </a>
                 <ul className="flex space-x-4">
                 <li>
