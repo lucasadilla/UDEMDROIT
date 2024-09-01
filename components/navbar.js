@@ -9,7 +9,7 @@ export default function Navbar() {
                     <img src="/images/logo femme et droit-Photoroom.png" alt="Logo" className="logo w-10 h-10 mr-4"/>
                 </a>
                 <ul className="flex space-x-4">
-                <li>
+                    <li>
                         <Link href="/">
                             <span className="nav-link text-black">Accueil</span>
                         </Link>
@@ -31,7 +31,12 @@ export default function Navbar() {
                     </li>
                     <li>
                         <Link href="/sponsor">
-                            <span className="nav-link text-black">Guide du Sponsor</span>
+                            <span className="nav-link text-black">Guide des commanditaires</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/commanditaires">
+                            <span className="nav-link text-black">Nos commanditaires</span>
                         </Link>
                     </li>
                 </ul>

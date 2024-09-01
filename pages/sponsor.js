@@ -47,7 +47,7 @@ export default function SponsorsPage() {
         <div>
             <Navbar />
             <main className="p-8">
-                <h1 className="text-4xl text-center mb-8">Guide du Sponsor</h1>
+                <h1 className="page-title text-center mb-8">Guide des commanditaires</h1>
                 <div className="sponsor-box">
                     <div className="sponsors-grid">
                         {sponsors.map(sponsor => (

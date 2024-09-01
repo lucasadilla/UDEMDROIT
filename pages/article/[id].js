@@ -45,8 +45,8 @@ export default function Article() {
         <div>
             <Navbar />
             <main className="article-page article-box">
-                <button onClick={handleBack} className="back-button">← Back</button>
-                <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
+                <button onClick={handleBack} className="back-button">← Arrière</button>
+                <h1 className="article-title font-bold mb-4">{article.title}</h1>
                 <div className="flex items-center mb-4">
                     <Image src={article.authorImage} alt={article.author} width={40} height={40} className="author-image" />
                     <div className="ml-2">
@@ -56,7 +56,7 @@ export default function Article() {
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: article.content.replace(/\n/g, '<br />') }} />
                 {article.id === 2 && <ImageCarouselCard images={images} />}
-                <button onClick={handleShare} className="share-button">Share this article</button>
+                <button onClick={handleShare} className="share-button">Partagez cet article</button>
             </main>
             <Footer/>
         </div>

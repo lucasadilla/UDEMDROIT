@@ -20,10 +20,10 @@ export default function Home() {
             <Navbar />
             <main className="relative">
                 <div className="banner">
-                    <img src="/images/front.png" alt="Banner" className="w-full h-auto" />
+                        <img src="/images/front.JPG" alt="Banner" className="w-full h-auto" />
                     <div className="banner-text-box">
-                        <h1 className="text-4xl text-center text-white">LA RECHERCHE AU FÉMININ</h1>
-                        <h2 className="text-4xl text-center text-white mt-4">Promouvoir le féminisme intersectionnel par la recherche et la sensibilisation</h2>
+                        <h1 className="text-4xl text-center text-white">FEMME & DROIT</h1>
+                        <h2 className="text-4xl text-center text-white mt-4"> Promotion du féminisme intersectionnel auprès de la communauté étudiante de l'Université de Montréal</h2>
                     </div>
                 </div>
                 <section className="recent-articles">
