@@ -325,6 +325,14 @@ button[type="submit"]:hover {
     justify-content: center;
 }
 
+.sponsored-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+
 .sponsor-box {
     border: 1px solid #9757a2; /* Thin border */
     padding: 1rem; /* Padding inside the box */
@@ -339,7 +347,7 @@ button[type="submit"]:hover {
 .small-image {
     width: 500px;
     height: 800px;
-    object-fit: cover;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -595,4 +603,10 @@ button[type="submit"]:hover {
 
 .back-button:hover {
     background-color: #333;
+}
+
+.border-image {
+    border: 2px solid #000; /* Adjust the border size and color as needed */
+    padding: 5px; /* Optional: Add padding inside the border */
+    border-radius: 50%; /* Ensure the border is circular */
 }
