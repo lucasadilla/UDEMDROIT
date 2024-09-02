@@ -20,13 +20,15 @@ export default function Commanditaires() {
     return (
         <div>
             <Navbar/>
-            <h1 className="page-title text-center mb-4">Merci à nos commanditaires</h1> {/* Adjusted margin */}
-            <div className="commanditaires-sponsored-grid">
-                {sponsored.map(sponsor => (
-                    <Sponsor key={sponsor.id} sponsor={sponsor} onClick={handleSponsorClick} />
-                ))}
-            </div>
-            <Footer/>
+            <main className="p-8">
+                <h1 className="page-title text-center mb-4">Merci à nos commanditaires</h1> {/* Adjusted margin */}
+                <div className="commanditaires-sponsored-grid">
+                    {sponsored.map(sponsor => (
+                        <Sponsor key={sponsor.id} sponsor={sponsor} onClick={handleSponsorClick}/>
+                    ))}
+                </div>
+            </main>
+                <Footer/>
         </div>
-    );
+);
 }

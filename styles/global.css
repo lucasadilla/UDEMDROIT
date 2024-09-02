@@ -165,7 +165,7 @@ nav a {
     color: #9858a3;
     font-size: 2.25rem;
     line-height: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 
 }
 
@@ -339,13 +339,14 @@ button[type="submit"]:hover {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px; /* Adjust the gap as needed */
     align-items: start; /* Align items to the start to fit the size of the pictures */
+    margin-bottom: 32rem;
+    justify-content: center;
 }
 
 .commanditaires-sponsored-grid img {
     width: 100%;
     height: auto;
-    max-width: 150px; /* Adjust the max-width as needed */
-    border-radius: 0.5rem; /* Optional: Add rounded corners */
+    max-width: 220px; /* Adjust the max-width as needed */
     cursor: pointer; /* Change cursor to pointer to indicate clickable image */
 }
 
