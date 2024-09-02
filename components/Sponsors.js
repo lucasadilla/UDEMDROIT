@@ -1,10 +1,15 @@
 // components/Sponsor.js
 import React from 'react';
 
-export default function Sponsor({ sponsor }) {
+export default function Sponsor({ sponsor, onClick }) {
     return (
-        <a href={sponsor.link} target="_blank" rel="noopener noreferrer" className="sponsor">
-            <img src={sponsor.image} alt={sponsor.name} className="small-image" />
-        </a>
+        <div className="sponsor">
+            <img
+                src={sponsor.image}
+                alt={sponsor.name}
+                className="small-image"
+                onClick={() => onClick(sponsor)}
+            />
+        </div>
     );
 }
