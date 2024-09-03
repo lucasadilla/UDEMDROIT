@@ -9,6 +9,7 @@ const members = [
     { name: "Negin Samadi", title: "Trésorière", image: "/images/Negin.jpeg" },
     { name: "Maweya Mbingala", title: "Secrétaire générale", image: "/images/Maweya.jpeg" },
     { name: "Tatiana Stephan", title: "VP Évènements", image: "/images/Tatiana.jpeg" },
+    {},
     { name: "Poste Ouvert", title: "VP Chercheuse", image: "" }
 ];
 

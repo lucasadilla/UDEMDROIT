@@ -15,13 +15,21 @@ export default async function handler(req, res) {
             },
         });
 
+        // Format the email content
+        const emailContent = `
+            Objet: ${objet}
+            Message: ${message}
+            Nom: ${nom}
+            Courriel: ${email}
+        `;
+
         try {
             // Send email using Nodemailer
             await transporter.sendMail({
                 from: email,
-                to: 'femmesetdroit.udem@gmail.com',
+                to: 'lucas.pentlandhyde@gmail.com',
                 subject: objet,
-                text: message,
+                text: emailContent,
             });
 
             res.status(200).json({ message: 'Email sent successfully' });

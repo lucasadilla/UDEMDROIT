@@ -338,7 +338,7 @@ button[type="submit"]:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px; /* Adjust the gap as needed */
-    align-items: start; /* Align items to the start to fit the size of the pictures */
+    align-items: center; /* Align items to the start to fit the size of the pictures */
     margin-bottom: 32rem;
     justify-content: center;
 }
@@ -347,7 +347,14 @@ button[type="submit"]:hover {
     width: 100%;
     height: auto;
     max-width: 220px; /* Adjust the max-width as needed */
-    cursor: pointer; /* Change cursor to pointer to indicate clickable image */
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-left: none;
+}
+
+.commanditaires-sponsored-grid img:hover {
+    transform: translateY(-5px);
 }
 
 .sponsor-box {
