@@ -1,5 +1,5 @@
 // pages/commanditaires.js
-import Navbar from '../components/Navbar';
+import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 import Sponsor from '../components/Sponsors';
 import React from "react";

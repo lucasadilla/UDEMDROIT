@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Sponsor from '../components/Sponsors';
 import SponsorModal from '../components/SponsorModal';
-import Navbar from '../components/Navbar';
+import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 
 const sponsors = [

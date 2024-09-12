@@ -1,6 +1,6 @@
 import { ArticlesProvider, useArticles } from '../context/ArticlesContext';
 import ArticleCard from '../components/ArticleCard';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 
 export default function Blog() {
