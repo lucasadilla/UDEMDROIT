@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import Navbar from "../components/navbar";
 import Footer from '../../components/Footer';
+import Navbar from '../../components/navbar';
 import { useArticles } from '../../context/ArticlesContext';
 import Image from 'next/image';
 import ImageCarouselCard from '../../components/ImageCarouselCard';
