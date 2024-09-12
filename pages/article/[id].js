@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import Navbar from '../../components/Navbar';
+import Navbar from "../components/navbar";
 import Footer from '../../components/Footer';
 import { useArticles } from '../../context/ArticlesContext';
 import Image from 'next/image';
