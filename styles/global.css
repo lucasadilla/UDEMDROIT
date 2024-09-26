@@ -640,6 +640,10 @@ button[type="submit"]:hover {
         padding: 10px;
     }
 
+    .body{
+        font-family: 'Corbel', serif;
+    }
+
     .header, .footer {
         text-align: center;
     }
@@ -670,18 +674,38 @@ button[type="submit"]:hover {
         gap: 1rem;
     }
 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
     nav ul {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 100%;
     }
 
     nav li {
-        margin-right: 0;
+        margin: 0;
         margin-bottom: 10px;
     }
 
     nav a {
         padding: 10px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .grid {
@@ -711,5 +735,109 @@ button[type="submit"]:hover {
 
     .mb-8 {
         margin-bottom: 1rem;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-card .left-side,
+    .contact-card .right-side {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .contact-card .left-side h2 {
+        font-size: 2rem;
+    }
+
+    .contact-card .left-side p {
+        font-size: 1rem;
+    }
+
+    .sponsor-box {
+        padding: 1rem;
+    }
+
+    .sponsors-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sponsor {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sponsor img {
+        width: 100%;
+        height: auto;
+    }
+
+    .back-button {
+        top: 17rem; /* Adjust the top position for better visibility on smaller screens */
+        left: 1rem; /* Adjust the left position for better visibility on smaller screens */
+        padding: 0.5rem 1rem; /* Ensure padding is appropriate for touch interaction */
+        font-size: 1rem; /* Adjust font size for readability */
+    }
+
+    .modal-content {
+        max-width: 90%; /* Adjust the max-width for smaller screens */
+        padding: 1rem; /* Ensure padding is appropriate for smaller screens */
+    }
+
+    .large-image {
+        max-width: 100%; /* Ensure the image fits within the modal */
+        max-height: 70vh; /* Adjust the max-height for better visibility */
+    }
+
+    .navigation button {
+        font-size: 1.5rem; /* Adjust button size for better touch interaction */
+    }
+
+    .page-counter {
+        font-size: 0.875rem; /* Adjust font size for readability */
+    }
+
+    /* styles/global.css */
+    .hamburger-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-container.hidden,
+    .instagram-icon.hidden {
+        display: none;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .instagram-icon {
+        margin-left: auto;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    .hamburger-icon {
+        display: none;
     }
 }
