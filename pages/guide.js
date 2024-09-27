@@ -1,4 +1,4 @@
-// pages/sponsor.js
+// pages/guide.js
 import React, { useState } from 'react';
 import Sponsor from '../components/Sponsors';
 import SponsorModal from '../components/SponsorModal';

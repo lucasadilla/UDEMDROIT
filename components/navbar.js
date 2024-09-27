@@ -38,7 +38,7 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/sponsor">
+                    <Link href="/guide">
                         <span className="nav-link text-black">Guide des commanditaires</span>
                     </Link>
                 </li>

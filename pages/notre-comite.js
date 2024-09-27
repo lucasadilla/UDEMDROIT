@@ -3,8 +3,8 @@ import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 
 const members = [
-    { name: "Élie Legault", title: "VP Communications", image: "/images/bbg.jpeg" },
     { name: "Kiana Salesian-Zanjani", title: "Présidente", image: "/images/Kiana.JPG" },
+    { name: "Élie Legault", title: "VP Communications", image: "/images/bbg.jpeg" },
     { name: "Marie-Laurence Desmarais", title: "VP Affaires Externes", image: "/images/marie laurence.JPG" },
     { name: "Negin Samadi", title: "Trésorière", image: "/images/Negin.jpeg" },
     { name: "Maweya Mbingala", title: "Secrétaire générale", image: "/images/Maweya.jpeg" },
