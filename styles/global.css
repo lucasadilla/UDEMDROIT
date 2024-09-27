@@ -779,7 +779,7 @@ button[type="submit"]:hover {
     }
 
     .back-button {
-        top: 17rem; /* Adjust the top position for better visibility on smaller screens */
+        top: 8rem; /* Adjust the top position for better visibility on smaller screens */
         left: 1rem; /* Adjust the left position for better visibility on smaller screens */
         padding: 0.5rem 1rem; /* Ensure padding is appropriate for touch interaction */
         font-size: 1rem; /* Adjust font size for readability */
@@ -839,5 +839,23 @@ button[type="submit"]:hover {
 @media (min-width: 601px) {
     .hamburger-icon {
         display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem; /* Adjust the padding to make the navbar smaller */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: auto;
+    }
+
+    .nav-links li {
+        margin-left: 25px;
     }
 }

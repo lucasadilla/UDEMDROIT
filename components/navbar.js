@@ -18,6 +18,8 @@ export default function Navbar() {
             </div>
             <ul className={`nav-links ${isOpen ? 'open' : ''} md:flex-row md:flex space-x-4`}>
                 <li>
+                </li>
+                <li>
                     <Link href="/">
                         <span className="nav-link text-black">Accueil</span>
                     </Link>
@@ -48,7 +50,8 @@ export default function Navbar() {
                     </Link>
                 </li>
             </ul>
-            <a href="https://www.instagram.com/femmesetdroit/" target="_blank" rel="noopener noreferrer" className={`${isOpen ? 'hidden' : ''}`}>
+            <a href="https://www.instagram.com/femmesetdroit/" target="_blank" rel="noopener noreferrer"
+               className={`${isOpen ? 'hidden' : ''}`}>
                 <img src="/images/insta.png" alt="Instagram" className="instagram-icon w-8 h-8"/>
             </a>
             <button className="hamburger-icon" onClick={toggleMenu}>
