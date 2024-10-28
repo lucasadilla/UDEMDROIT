@@ -702,6 +702,7 @@ button[type="submit"]:hover {
         display: none;
     }
 
+
     .nav-links.open {
         display: flex;
         flex-direction: column;
