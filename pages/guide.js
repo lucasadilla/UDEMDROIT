@@ -6,16 +6,16 @@ import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 
 const sponsors = [
-    { id: 1, name: 'Cover Photo', image: '../images/sponsors/Page titre.png' },
-    { id: 2, name: 'Sponsor 2', image: '../images/sponsors/Exécutif 2024-2025.png' },
-    { id: 3, name: 'Sponsor 3', image: '../images/sponsors/Mot intro.png' },
-    { id: 4, name: 'Sponsor 4', image: '../images/sponsors/Partenariat.png' },
-    { id: 5, name: 'Sponsor 5', image: '../images/sponsors/Avantages.png' },
-    { id: 6, name: 'Sponsor 6', image: '../images/sponsors/Catégories.png' },
-    { id: 7, name: 'Sponsor 7', image: '../images/sponsors/2024-2025 en photos.png' },
-    { id: 8, name: 'Sponsor 8', image: '../images/sponsors/Activités & événements.png' },
-    { id: 9, name: 'Sponsor 9', image: '../images/sponsors/Présence médiatique.png' },
-    { id: 10, name: 'Sponsor 10', image: '../images/sponsors/Remerciements.png' },
+    { id: 1, name: 'Cover Photo', image: '/images/sponsors/Page titre.png' },
+    { id: 2, name: 'Sponsor 2', image: '/images/sponsors/Exécutif 2024-2025.png' },
+    { id: 3, name: 'Sponsor 3', image: '/images/sponsors/Mot intro.png' },
+    { id: 4, name: 'Sponsor 4', image: '/images/sponsors/Partenariat.png' },
+    { id: 5, name: 'Sponsor 5', image: '/images/sponsors/Avantages.png' },
+    { id: 6, name: 'Sponsor 6', image: '/images/sponsors/Catégories.png' },
+    { id: 7, name: 'Sponsor 7', image: '/images/sponsors/2024-2025 en photos.png' },
+    { id: 8, name: 'Sponsor 8', image: '/images/sponsors/Activités & événements.png' },
+    { id: 9, name: 'Sponsor 9', image: '/images/sponsors/Présence médiatique.png' },
+    { id: 10, name: 'Sponsor 10', image: '/images/sponsors/Remerciements.png' },
 ];
 
 export default function SponsorsPage() {
