@@ -1,6 +1,8 @@
 // pages/notre-comite.js
 import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
+import Head from "next/head";
+import React from "react";
 
 const members = [
     { name: "Kiana Salesian-Zanjani", title: "Présidente", image: "/images/Kiana.JPG" },
@@ -15,6 +17,9 @@ const members = [
 export default function NotreComite() {
     return (
         <div>
+            <Head>
+                <title>Notre Comité</title>
+            </Head>
             <Navbar />
             <main className="p-8">
                 <h1 className="page-title text-center mb-8">NOTRE COMITÉ</h1>

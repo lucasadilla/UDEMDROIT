@@ -4,6 +4,7 @@ import Sponsor from '../components/Sponsors';
 import SponsorModal from '../components/SponsorModal';
 import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
+import Head from "next/head";
 
 const sponsors = [
     { id: 1, name: 'Cover Photo', image: '/images/sponsors/Page titre.png' },
@@ -45,6 +46,9 @@ export default function SponsorsPage() {
 
     return (
         <div>
+            <Head>
+                <title>Guide</title>
+            </Head>
             <Navbar />
             <main className="p-8">
                 <h1 className="page-title text-center mb-8">Guide des commanditaires</h1>

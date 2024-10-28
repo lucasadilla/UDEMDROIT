@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 import Sponsor from '../components/Sponsors';
 import React from "react";
+import Head from "next/head";
 
 const sponsored = [
     { id: 1, name: 'Osler', image: '/images/sponsors/osler.jpg', link: 'https://www.osler.com/en/' },
@@ -19,6 +20,9 @@ export default function Commanditaires() {
 
     return (
         <div>
+            <Head>
+                <title>Commanditaires</title>
+            </Head>
             <Navbar/>
             <main className="p-8">
                 <h1 className="page-title text-center mb-4">Merci à nos commanditaires</h1> {/* Adjusted margin */}
