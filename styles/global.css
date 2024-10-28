@@ -105,7 +105,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: #eddcef;
+    background-color: #e8e0e0;
     min-height: 100vh;
 }
 
@@ -162,7 +162,7 @@ nav a {
 }
 
 .page-title {
-    color: #9858a3;
+    color: #000000;
     font-size: 2.25rem;
     line-height: 2.5rem;
     margin-bottom: 5rem;
@@ -351,6 +351,7 @@ button[type="submit"]:hover {
     padding: 5px;
     border: 2px solid #ffffff;
     border-left: none;
+    border-radius: 50%;
 }
 
 .commanditaires-sponsored-grid img:hover {

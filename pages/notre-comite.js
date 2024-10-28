@@ -6,10 +6,10 @@ const members = [
     { name: "Kiana Salesian-Zanjani", title: "Présidente", image: "/images/Kiana.JPG" },
     { name: "Élie Legault", title: "VP Communications", image: "/images/bbg.jpeg" },
     { name: "Marie-Laurence Desmarais", title: "VP Affaires Externes", image: "/images/marie laurence.JPG" },
-    { name: "Negin Samadi", title: "Trésorière", image: "/images/Negin.jpeg" },
+    { name: "Negin Samadi", title: "Trésorière", image: "/images/Negin.jpg" },
     { name: "Maweya Mbingala", title: "Secrétaire générale", image: "/images/Maweya.jpeg" },
     { name: "Tatiana Stephan", title: "VP Évènements", image: "/images/Tatiana.jpeg" },
-    { name: "Lina Tourabi", title: "VP Première", image: "" }
+    { name: "Lina Tourabi", title: "VP Première", image: "/images/lina.png" }
 ];
 
 export default function NotreComite() {
