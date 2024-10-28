@@ -7,6 +7,24 @@ export function ArticlesProvider({ children }) {
     const [articles, setArticles] = useState([
         {
             id: 1,
+            title: 'Montée des idéologies de droite ; qu’est-ce que cela signifie pour les droits des femmes ?\n',
+            image: '/images/blogs/coloredWomen.jpg',
+            author: 'Lina Tourabi',
+            authorImage: '/images/lina.png',
+            date: '27 Oct. 2024',
+            content: '          ‘‘Quand l’extrême droite avance, les droits des femmes reculent’’\n' +
+                '\nQu’est-ce que l’extrême droite ?\n' +
+                '\nC’est un ensemble de mouvements, partis politiques et idéologies qui se caractérisent par un nationalisme exacerbé, souvent accompagné de xénophobie, d’anti-immigration, et d’un rejet des valeurs progressistes. Ces idées comprennent un volet anti-féministe et un agenda opposé aux droits des femme. Son impact se fait visible dans de plus en plus d’États occidentaux à travers un accès à l’IVG graduellement réduit.\n' +
+                '\nRéduction des droits reproductifs\n\n' +
+                'Au Canada, le droit à l’avortement est considéré comme fondamental, puisqu’il est protégé par l’article 7 de la loi constitutionnelle de 1982. Cet article garantit le droit à la liberté, à la vie et à la sécurité, ce qui assure aux femmes le droit de disposer de leur corps. C’est une question de justice fondamentale. Si le vent de l’extrême droite traverse les frontières canadiennes, ce droit reproductif peut très bien cesser d’exister pour satisfaire une forte opinion publique.\n' +
+                'Les dégâts de cette tendance politique sont déjà nombreux. En Italie, le gouvernement d’extrême droite de Giorgia Meloni a récemment adopté une loi qui permet aux militants pro-vie d’accéder aux cliniques de planification familiale où se tiennent des consultations sur l’IVG. Cette décision soulève l’enjeu du droit à la dignité dans l’espace médical qui se voit menacé. La déshumanisation de la femme en est une conséquence directe.\n' +
+                'Par ailleurs aux États-Unis, depuis la décision de la Cour Suprême de 2022, plusieurs femmes font le choix de ne pas consulter un médecin à la suite d\'une fausse couche par crainte d’être accusées d’avoir illégalement avorté. Ce phénomène fait écho au drame de Brittany Watts, une Américaine qui a fait une fausse couche d’un fœtus non-viable. Le personnel médical s’interrogeait sur la légalité d’un avortement, ce qui a empêché la procédure d’avoir lieur, bien qu’une fausse couche fût inévitable. Brittany Watts a été poursuivie par le procureur de l’État de l’Ohio pour avoir profané le cadavre du fœtus. Ces faits soulignent l’importance d’un accès libre à l’IVG avant tout pour des questions de sécurité.\n\n' +
+                'Retour aux rôles traditionnels\n\n' +
+                'Qui dit extrême droite, dit retour de l’homme pourvoyeur et de la femme domestique. Bien que chacun soit libre de choisir son rôle au sein d’une société, il est impératif que ce choix ne soit pas forcé par une croyance qui établit la naturalité de ces rôles. Cette rhétorique est d’abord une entrave à l’autonomisation de la femme, projet qui, rappelons-le, fait l’objet de consensus de la majorité à l’ONU.\n\n' +
+                'Lorsque cette autonomisation est compromise, les femmes se voient déléguer moins de pouvoir sur le marché du travail, dans les espaces de débat et même au sein de la famille. Promouvoir l\'éducation, la formation et le développement professionnel des femmes est un objectif que l’ONU s’engage à faire appliquer et cette émancipation est un facteur clé pour mettre fin aux disparités économiques et aux inégalités de genre. La Banque Mondiale rapporte qu’à l’échelle mondiale, la participation des femmes au marché du travail a diminué, passant de 51 % en 2000 à 48 % en 2019. Avec la montée des idéologies de droite, cet enjeu est d’autant plus d’actualité.\n',
+        },
+        {
+            id: 2,
             title: 'Elles Investies',
             image: '/images/blogs/elles.png',
             author: 'Élie Legault',
@@ -15,7 +33,7 @@ export function ArticlesProvider({ children }) {
             content: '« 82% des femmes s’en remettent à leur conjoint pour la gestion de leurs finances. […] Seulement une femme sur quatre possède des placements à la Bourse. »<p></p><p>C’est ce que M Karman Kong nous dévoile dans son best-seller Elle investit. Alors que les hommes entendent parler d’investissements dès leur plus jeune âge, les femmes elles sont poussées à l’éviter, construisant éventuellement une réticence de ce sujet qui semble hors de portée. Kong se dédie à aider les femmes autour du monde à apprendre comment investir de façon accessible et simple, et utilise son livre comme canal de savoir. Le ton convivial et amical de l\'oeuvre permet aux lectrices de sentir une certaine proximité avec Kong, comme s’il s’agissait d’une conversation entre des amies. Se faisant, l’autrice participe à outiller les femmes dans le monde de l’investissement et à réduire l’écart de rémunération homme-femme.</p><p>Dans ses débuts, Karman Kong crée une page Instagram, dédiée à construire une communauté de femmes qui s’intéressent à la finance, de femmes qui pourraient s’entraider à naviguer le vaste système de l’investissement. Se faisant, elle rend un sujet habituellement effrayant et inconnu plus accessible, démystifié et même amusant. Sa page Instagram, créée en 2021, a aujourd’hui plus de 48 000 abonnés et accompagne les femmes dans leur cheminement financier! On y voit passer des icons de la culture populaire féminine comme Elle Woods, Barbie, Lizzo et bien d’autres. Bien qu’elle se concentre principalement sur l’investissement, la page aborde une vaste étendue de sujets comme les élections, la psychologie, les régimes de protection, des entreprises en plein essor, et bien d’autres!</p><p>Le livre de Karman Kong est exhaustif et explore le monde financier de A à Z. Que ce soit pour se débarrasser de ses dettes ou bien pour savoir où, comment et quand investir ou épargner, l’autrice vous accompagne à chaque étape de votre parcours. Elle explore le sujet sous ses volets chiffrés et théoriques, mais aussi psychologiques et sociaux. Son œuvre est à la fois une réflexion critique de la société et un guide réussi.</p>',
         },
         {
-            id: 2,
+            id: 3,
             title: 'Journée internationale des droits de la femme',
             image: '/images/blogs/jour.png',
             author: 'Élie Legault',
@@ -24,7 +42,7 @@ export function ArticlesProvider({ children }) {
             content: 'En cette journée internationale des droits de la femme, nous vous partageons les grandes lignes du parcours ardu qu’a pris l’évolution des droits des Canadiennes. En passant par différentes vagues d’un féminisme à plusieurs facettes, grâce aux efforts des Suffragettes, de groupes activistes de femmes Autochtones, la montée du féminisme noir et biens d’autres acteurs ou mouvements sociaux marquants, nous sommes aujourd’hui un peu plus proche d’une égalité fondamentale.',
         },
         {
-            id: 3,
+            id: 4,
             title: 'La marche annuelle commémorative pour les femmes autochtones disparues',
             image: '/images/blogs/marche.png',
             author: 'Élie Legault',
@@ -57,7 +75,7 @@ export function ArticlesProvider({ children }) {
                 'Ce rapport a éveillé plusieurs personnes aux atrocités que vivent les communautés autochtones et légitimer les revendications des mouvements comme MMIW, mais il ne fait que marquer le début du long chemin qu’il reste encore à faire. Nous vous invitons donc à prendre cette journée pour discuter avec vos proches, échanger et vous sensibiliser à la menace qui guette les communautés autochtones. ',
         },
         {
-            id: 4,
+            id: 5,
             title: 'Polytechnique, l’histoire d’un drame, mais aussi l’histoire de leurs vies',
             image: '/images/blogs/poly.png',
             author: 'Élie Legault',
@@ -151,7 +169,7 @@ export function ArticlesProvider({ children }) {
                 'C’était la plus jeune victime de Lépine et, 8 ans après le drame, vous pouviez entrer dans sa chambre encore intouchée, comme si cette fameuse journée n’avait jamais eu lieu. Emportés par le chagrin, ses parents ont gardé les quartiers de leur fille identiques, prêt pour le retour de celle-ci. Ils retrouvent d’ailleurs dans ses choses une lettre écrite par la jeune fille du haut de ses 17 ans : « Je n\'ai pas peur de la mort, j\'ai peur des souffrances qui l\'entourent. J\'espère de mourir dans une sorte d\'accident, en pleine action ». Les parents d’Annie trouvent consolation en se disant que leur fille les a quittés comme elle le voulait. De son vivant, Annie enseignait la natation à des enfants et poursuivait ses études en génie métallurgique dans le but d’éventuellement utiliser ses apprentissages dans sa lutte pour l’environnement.',
         },
         {
-            id: 5,
+            id: 6,
             title: 'Journée internationale pour l\'élimination de la violence à l\'égard des femmes',
             image: '/images/blogs/inter.png',
             author: 'Élie Legault',
@@ -177,7 +195,7 @@ export function ArticlesProvider({ children }) {
                 'D’autre part, le 26 novembre 2021 est adopté à l’unanimité par l’Assemblée nationale le projet de loi 92. Il vise la création d’un tribunal spécialisé en matière de violence sexuelle et de violence conjugale.  Ce projet est adopté à la suite des recommandations du rapport Rebâtir la confiance, rédigé par le Comité d’experts sur l’accompagnement des personnes victimes d’agressions sexuelles et de violence conjugale. C’est un autre exemple de progrès pour la sécurité des femmes dont, nous l’espérons, le fruit se fera sentir sous peu.',
         },
         {
-            id: 6,
+            id: 7,
             title: '3 bonnes nouvelles pour le mouvement féministe',
             image: '/images/blogs/trois.png',
             author: 'Élie Legault',
@@ -206,7 +224,7 @@ export function ArticlesProvider({ children }) {
                 'Une bonne nouvelle pour la représentation de femmes dans les hautes sphères juridiques : une majorité de femmes siège à la Cour suprême pour la première fois de son histoire. La juge Moreau, une francophone qui était juge en chef de la Cour du Banc du Roi de l’Alberta, devient la cinquième juge femme à la Cour suprême du Canada. C’est non seulement une marque importante dans l’histoire du féminisme canadien, mais aussi un évènement important pour les communautés francophones au Canada. En effet, Mary Moreau porte à cœur l’accès aux services juridiques en français et a notamment participé à la fondation de l’Association des juristes d’expression française de l’Alberta. ',
         },
         {
-            id: 7,
+            id: 8,
             title: 'Le coût de la Guerre pour les femmes',
             image: '/images/blogs/guerre.png',
             author: 'Élie Legault',
