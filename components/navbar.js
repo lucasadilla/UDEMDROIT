@@ -35,6 +35,11 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li>
+                    <Link href="/venir">
+                        <span className="nav-link text-black">Événements</span>
+                    </Link>
+                </li>
+                <li>
                     <Link href="/notre-comite">
                         <span className="nav-link text-black">Notre Comité</span>
                     </Link>
@@ -52,7 +57,7 @@ export default function Navbar() {
             </ul>
             <a href="https://www.instagram.com/femmesetdroit/" target="_blank" rel="noopener noreferrer"
                className={`${isOpen ? 'hidden' : ''}`}>
-                <img src="/images/insta.png" alt="Instagram" className="instagram-icon w-8 h-8"/>
+            <img src="/images/insta.png" alt="Instagram" className="instagram-icon w-8 h-8"/>
             </a>
             <button className="hamburger-icon" onClick={toggleMenu}>
                 <div>

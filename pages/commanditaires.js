@@ -22,12 +22,14 @@ export default function Commanditaires() {
         <div>
             <Head>
                 <title>Commanditaires</title>
+                <meta name="description" content="Découvrez nos commanditaires et partenaires qui soutiennent notre mission chez Femme & Droit."/>
+                <meta name="keywords" content="commanditaires, partenaires, féminisme, Université de Montréal, soutien"/>
             </Head>
             <Navbar/>
             <main className="p-8">
                 <h1 className="page-title text-center mb-4">Merci à nos commanditaires</h1> {/* Adjusted margin */}
                 <div className="commanditaires-sponsored-grid">
-                    {sponsored.map(sponsor => (
+                {sponsored.map(sponsor => (
                         <Sponsor key={sponsor.id} sponsor={sponsor} onClick={handleSponsorClick}/>
                     ))}
                 </div>

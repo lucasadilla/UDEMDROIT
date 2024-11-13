@@ -16,11 +16,13 @@ export default function Blog() {
         <div>
             <Head>
                 <title>Blog</title>
+                <meta name="description" content="Lisez des articles sur le féminisme intersectionnel et les événements communautaires à l'Université de Montréal."/>
+                <meta name="keywords" content="féminisme, blog, articles, Université de Montréal, communauté"/>
             </Head>
-            <Navbar />
+            <Navbar/>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {articles.map((article) => (
-                    <ArticleCard key={article.id} article={article} isLarge={true} />
+                    <ArticleCard key={article.id} article={article} isLarge={true}/>
                 ))}
             </div>
             <Footer />

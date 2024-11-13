@@ -10,10 +10,12 @@ export default function Contact() {
         <div>
             <Head>
                 <title>Contact</title>
+                <meta name="description" content="Contactez Femme & Droit pour plus d'informations ou des opportunités de collaboration."/>
+                <meta name="keywords" content="contact, féminisme, Université de Montréal, communauté, collaboration"/>
             </Head>
-            <Navbar />
-            <ContactCard />
-            <Footer />
+            <Navbar/>
+            <ContactCard/>
+            <Footer/>
         </div>
     );
 }

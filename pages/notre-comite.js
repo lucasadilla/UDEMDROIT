@@ -19,6 +19,8 @@ export default function NotreComite() {
         <div>
             <Head>
                 <title>Notre Comité</title>
+                <meta name="description" content="Rencontrez les membres dévoués du comité de Femme & Droit, promoteurs de féminisme et d'égalité." />
+                <meta name="keywords" content="comité, membres, féminisme, Université de Montréal, égalité" />
             </Head>
             <Navbar />
             <main className="p-8">

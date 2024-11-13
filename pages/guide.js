@@ -47,9 +47,11 @@ export default function SponsorsPage() {
     return (
         <div>
             <Head>
-                <title>Guide</title>
+                <title>Guide des Commanditaires</title>
+                <meta name="description" content="Découvrez notre guide des commanditaires chez Femme & Droit, avec des informations sur les partenariats et leurs avantages."/>
+                <meta name="keywords" content="commanditaires, guide, partenariats, avantages, féminisme, Université de Montréal"/>
             </Head>
-            <Navbar />
+            <Navbar/>
             <main className="p-8">
                 <h1 className="page-title text-center mb-8">Guide des commanditaires</h1>
                 <div className="sponsor-box">

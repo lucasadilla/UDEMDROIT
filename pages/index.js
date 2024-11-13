@@ -19,12 +19,14 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>Home Page</title>
+                <title>Accueil</title>
+                <meta name="description" content="Femme & Droit - Promotion du féminisme intersectionnel auprès de la communauté étudiante de l'Université de Montréal."/>
+                <meta name="keywords" content="féminisme, intersectionnalité, Université de Montréal, communauté, féminisme étudiant"/>
             </Head>
-            <Navbar />
+            <Navbar/>
             <main className="relative">
                 <div className="banner">
-                        <img src="/images/front.jpg" alt="Banner" className="w-full h-auto" />
+                    <img src="/images/front.jpg" alt="Banner" className="w-full h-auto"/>
                     <div className="banner-text-box">
                         <h1 className="text-4xl text-center text-white">FEMME & DROIT</h1>
                         <h2 className="text-4xl text-center text-white mt-4"> Promotion du féminisme intersectionnel auprès de la communauté étudiante de l'Université de Montréal</h2>

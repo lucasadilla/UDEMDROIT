@@ -679,7 +679,7 @@ button[type="submit"]:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 0.5rem 1rem;
     }
 
     nav ul {
@@ -699,9 +699,8 @@ button[type="submit"]:hover {
     }
 
     .nav-links {
-        display: none;
+        display: none; /* Hide nav links when the menu is closed */
     }
-
 
     .nav-links.open {
         display: flex;
@@ -816,8 +815,9 @@ button[type="submit"]:hover {
     }
 
     .logo-container {
+        flex: 1;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .logo-container.hidden,
@@ -830,11 +830,15 @@ button[type="submit"]:hover {
     }
 
     .instagram-icon {
-        margin-left: auto;
+        flex: 1;
+        display: flex;
+        justify-content: center;
     }
 
     .hamburger-icon {
-        display: block;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
