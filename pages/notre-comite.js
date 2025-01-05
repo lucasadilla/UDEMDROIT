@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import React from "react";
+import SponsorsBar from "../components/Sponsors";
+
 
 const members = [
     { name: "Kiana Salesian-Zanjani", title: "Présidente", image: "/images/Kiana.JPG" },
@@ -45,6 +47,7 @@ export default function NotreComite() {
                         <p className="text-gray-600">VP Première</p>
                     </div>
                 </div>
+                <SponsorsBar />
             </main>
             <Footer />
         </div>

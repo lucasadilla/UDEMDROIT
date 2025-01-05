@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import React from "react";
+import SponsorsBar from "../components/Sponsors";
+
 
 
 export default function Venir() {
@@ -16,7 +18,8 @@ export default function Venir() {
             <Navbar />
             <main className="p-8">
                 <h1 className="page-title text-center mb-8">ÉVÉNEMENTS À VENIR</h1>
-                <img src="/images/calendar.png"/>
+                <img  src="/images/calendar.png" className= "calendar"/>
+                <SponsorsBar />
             </main>
             <Footer/>
         </div>

@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import ContactCard from '../components/ContactCard';
 import Head from "next/head";
 import React from "react";
+import SponsorsBar from "../components/Sponsors";
+
 
 export default function Contact() {
     return (
@@ -15,6 +17,7 @@ export default function Contact() {
             </Head>
             <Navbar/>
             <ContactCard/>
+            <SponsorsBar />
             <Footer/>
         </div>
     );

@@ -4,7 +4,9 @@ import Footer from '../components/Footer';
 import ContactCard from '../components/ContactCard';
 import ArticleCard from '../components/ArticleCard';
 import { useArticles } from '../context/ArticlesContext';
+import SponsorsBar from "../components/Sponsors";
 import Head from 'next/head';
+import React from "react";
 
 export default function Home() {
     const { articles } = useArticles();
@@ -41,6 +43,7 @@ export default function Home() {
                     </div>
                 </section>
                 <ContactCard />
+                <SponsorsBar />
             </main>
             <Footer />
         </div>
