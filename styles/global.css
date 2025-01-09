@@ -795,6 +795,11 @@ button[type="submit"]:hover {
         height: 50vh;
     }
 
+    .calendar {
+        width: 100%;
+        max-width: none;
+    }
+
     .banner-text-box h1 {
         font-size: 2rem;
     }
