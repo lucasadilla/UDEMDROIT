@@ -787,6 +787,12 @@ button[type="submit"]:hover {
         text-align: center;
     }
 
+    .p-8{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
     .main-content {
         flex-direction: column;
     }
