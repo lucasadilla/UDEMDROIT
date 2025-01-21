@@ -312,7 +312,6 @@ button[type="submit"] {
     border: none;
     border-radius: 0 0.25rem 0.25rem 0;
     cursor: pointer;
-    margin-bottom: 8rem;
 }
 
 button[type="submit"]:hover {
@@ -375,17 +374,99 @@ button[type="submit"]:hover {
     object-fit: contain;
     cursor: pointer;
 }
+/* Sponsor Gallery Grid */
+.sponsor-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust minimum size to make images larger */
+    gap: 2rem; /* Adjust spacing between images */
+    padding: 1.5rem;
+}
 
+.sponsor-image {
+    width: 100%; /* Ensure the image fits within its grid cell */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 500px; /* Set a maximum size for the images */
+    object-fit: cover; /* Ensure images don’t distort */
+    border-radius: 8px; /* Optional: rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sponsor-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+/* Modal Styles */
 .modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 0; /* Remove any extra padding */
+    margin: 0; /* Remove any extra margin */
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; /* Ensure it doesn’t exceed the screen width */
+    max-height: 100%; /* Ensure it doesn’t exceed the screen height */
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px; /* Optional: Adjust for rounded corners */
+    object-fit: contain; /* Ensure the image scales properly without distortion */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.prev {
+    left: 20px; /* Place arrow to the left of the image */
+}
+
+.next {
+    right: 20px; /* Place arrow to the right of the image */
+}
+
+.prev:hover,
+.next:hover,
+.close:hover {
+    opacity: 0.8;
 }
 
 .modal-overlay {
@@ -471,7 +552,6 @@ button[type="submit"]:hover {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .contact-card .left-side {
@@ -636,6 +716,64 @@ button[type="submit"]:hover {
     border-radius: 50%; /* Ensure the border is circular */
 }
 
+/* Scroller container */
+.scroller {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+            90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+/* Scrolling inner content */
+.scroller__inner {
+    display: flex;
+    width: max-content;
+    gap: 8rem;
+    animation: scroll var(--_animation-duration, 40s) linear infinite;
+}
+
+/* Scrolling direction and speed */
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+.scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+}
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+/* Scroller item (logo) */
+.scroller-item {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
+
+.calendar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
 @media (max-width: 600px) {
     .container {
         padding: 10px;
@@ -649,12 +787,23 @@ button[type="submit"]:hover {
         text-align: center;
     }
 
+    .p-8{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
     .main-content {
         flex-direction: column;
     }
 
     .banner {
         height: 50vh;
+    }
+
+    .calendar {
+        width: 100%;
+        max-width: none;
     }
 
     .banner-text-box h1 {
@@ -761,10 +910,13 @@ button[type="submit"]:hover {
 
     .sponsor-box {
         padding: 1rem;
+        overflow: visible;
+        max-height: auto;
     }
 
     .sponsors-grid {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         gap: 1rem;
     }

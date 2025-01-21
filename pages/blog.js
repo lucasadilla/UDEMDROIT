@@ -2,7 +2,9 @@ import { ArticlesProvider, useArticles } from '../context/ArticlesContext';
 import ArticleCard from '../components/ArticleCard';
 import Navbar from "../components/navbar";
 import Footer from '../components/Footer';
+import SponsorsBar from "../components/Sponsors";
 import Head from 'next/head';
+import React from "react";
 
 export default function Blog() {
     const { articles } = useArticles();
@@ -25,6 +27,7 @@ export default function Blog() {
                     <ArticleCard key={article.id} article={article} isLarge={true}/>
                 ))}
             </div>
+            <SponsorsBar />
             <Footer />
         </div>
     );
