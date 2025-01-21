@@ -7,6 +7,48 @@ export function ArticlesProvider({ children }) {
     const [articles, setArticles] = useState([
         {
             id: 1,
+            title: 'Bonnes nouvelles pour la cause  \n',
+            image: '/images/blogs/bonnes/1.jpg',
+            author: 'Lina Tourabi',
+            authorImage: '/images/lina.png',
+            date: '27 Oct. 2024',
+            content: 'Dans le cadre de la semaine de l’implication féminine, nous voulons souligner le noble travail de trois femmes activistes qui ont su altérer la vision du monde pour le mieux.  \n' +
+                '\nKimberlé Crenshaw \n' +
+                'Elle est juriste, spécialiste du droit, théoricienne de la race, professeure de droit et militante pour la justice sociale. Étant fondatrice du Center for Intersectionality and Social Policy Studies (CISPS), c’est son travail qui a développé et popularisé le concept d’intersectionnalité. Cette pionnière du féminisme intersectionnel vient de remporter la prestigieuse médaille W.E.B. Du Bois remise par le Hutchins Center for African and African American Research de l’Université Harvard. Ce prix est la plus haute distinction pour des contributions exemplaires aux études noires, à la culture et à la recherche. \n'
+                +'\nKimberlé CrenshaNarges Mohammadi \n' + 'Elle est une militante iranienne pour les droits de humains qui a été arrêtée et emprisonnée à plusieurs reprises dans son pays pour son activisme féministe. Son travail contre la répression politique durant les manifestations déclenchées après la mort de Mahsa Amini lui a valu le Prix Nobel de la paix 2023. Cette victoire rend hommage au courage des femmes iraniennes qui font face aux inégalités de genre. \n'
+                +'\nBisan Owda  \n' + 'Elle est une journaliste et activiste d’origine palestinienne qui concentre ses efforts pour dénoncer les violations du droit international à Gaza. Ses vidéos ont fait le tour du monde et son documentaire It’s Bisan from Gaza and I’m still alive a remporté l’Emmy Award dans la catégorie du meilleur reportage film d’actualité. Ce prix témoigne du pouvoir d\'une femme, armée seulement d\'un téléphone, qui a survécu aux bombardements et qui continue de dénoncer les crimes de guerre.   \n'
+        },
+        {
+            id: 2,
+            title: 'Les VCS 2.0 : le fléau numérique de la manosphère\n',
+            image: '/images/blogs/mano.png',
+            author: 'Lina Tourabi',
+            authorImage: '/images/lina.png',
+            date: '27 Oct. 2024',
+            content: '« De pire en pire. »\n'
+                    +'C’est le constat qui revient souvent quand on lit les headlines des journaux ces temps-ci. On ne peut que tristement observer une réalité: les femmes à travers le monde sont autant secouées que frustrées, et avec raison. Que ce soit l’affaire Mazan qui en a brutalisé plusieurs, le scandale de P. Diddy qui nous plonge dans une méfiance plus que justifiée envers les géants d’Hollywood, ou encore le meurtre d’une doctoresse en Inde qui remet en cause la sécurité des femmes dans leur propre milieu de travail. Les médias et réseaux sociaux sont inondés d’histoires morbides qui révèlent les actions des personnes des plus communes aux plus influentes.\n'+
+                    '\nDe quoi vraiment s’alarmer.\n\n' +
+                    'Nous prenons un moment pour honorer la mémoire des victimes de violences à caractère sexuel, ces personnes qui sont infiniment plus que des headlines. Ce sont des individus accomplis, mais qui nous ont quitté des façons les plus viles. Nos pensées s’unissent à celles de leurs proches.\n'+
+                    'Toutes les violences à caractère sexuel (VCS) sont interreliées. C’est un vent noir dont l’origine s’ancre dans la misogynie et qui gagne en ampleur au fil du temps, parallèlement à l’évolution de nos sociétés et conjointement avec l’ère technologique. Spécifiquement, nous parlons ici du phénomène digital en croissance à grande échelle qui normalise les VCS et les encourage : la manosphère. \n'+
+                    '\nLa manosphère est un recoin sombre du net qui s’oppose au féminisme, le percevant comme beaucoup trop woke et une menace à la cohésion sociale. Cette section du web promeut des idéologies violentes envers les femmes visant à faire cesser leur autonomisation. Oui, le concept peut paraître dur à visualiser, mais songez aux « podcast bros » armés d’un micro et d’une caméra, qui débattent des heures durant sur pourquoi faut-il se méfier de la femme moderne. Bien qu’il peut paraître puéril, ce phénomène contribue considérablement à alimenter les idéologies misogynes chez les jeunes et ce, à une vitesse éclair.\n'+
+                    '\nUn rapport de HOPE not hate 2020 révèle que de plus en plus de jeunes âgées de 16 à 24 pensent que le féminisme constitue un obstacle à la réussite des hommes, ce qui ne fait que fortifier la corrélation entre la manosphère et la déshumanisation des femmes. De quoi alimenter plusieurs podcasts !\n'+
+                    '\nUn phénomène paradoxal\n\n'+
+                    'Ironiquement, la manosphère illustre tant le fruit du progrès technologique que de la régression sociétale. Comment peut-on utiliser des innovations de l’ère postmoderne pour véhiculer impunément des discours rétrogrades ? \n'+
+                    '\nEn effet, les « podcast bros » ne reflètent que la pointe de l’iceberg et demeurent symptomatiques du vrai danger du monde numérique. À sa pointe la plus extrême, la manosphère facilite directement les VCS en les banalisant. Après tout, un des piliers de ce monde numérique, Tate, a été arrêté par la police roumaine faisant face à des allégations de trafic sexuel. En alimentant les discours sexistes en ligne, le rapport de domination sur les femmes se solidifie, ce qui perpétue la culture du viol, allant de la manipulation émotionnelle à la coercition physique. Le courant des Incels (phénomène du web lancé par des personnes qui considèrent les relations sexuelles comme un droit inaliénable) démontrent leur misogynie par des propos violents et abusifs, ce qui donne lieu à des actes subordonnés aux VCS. Le corps de la femme est simultanément sujet à l’objectification dans ces espaces: y avoir accès devient presque une prérogative.\n'+
+                    '\nC\'est dans cette optique que des internautes, comme Dominique Pélicot, peuvent recruter des dizaines de personnes en ligne pour participer à des agressions sexuelles. Pour abuser de son ex-femme, Pélicot en a recruté ... 72. Il est bon de rappeler que le consentement requiert qu’il soit manifeste, libre, éclairé, spécifique et continu. Bien que ces critères ne soient souvent jugés trop rigides dans la manosphère, ce sont les dispositions du Code criminel qui prévalent, et heureusement.\n'+
+                    '\nDans sa finalité, la manosphère tue. À Toronto, en 2020, les services de sécurité désignent pour la première fois d’« activité terroriste » une attaque liée à l’idéologie incel. Un adolescent de 17 ans avait perpétré une agression dans un salon de massage, au cours de laquelle il avait poignardé à mort une femme et blessé deux autres personnes. En constatant ce climat abusif qui gagne les plus jeunes générations par l’entremise du net, on se rend compte du retard de l’encadrement juridique. Officiellement, le SCRS inscrit la manosphère dans les « extrémismes violents à caractère idéologique » et son activité constitue une infraction terroriste. Cependant, ce réseau virtuel répandu ne suit aucune structure ou planification dans ses activités et ses utilisateurs sont souvent anonymes, ce qui complique le travail du SCRS à l’ère numérique. De plus, comme énoncé dans la Loi sur le SCRS et conformément au droit à la liberté d’expression protégée par la Constitution, le Service ne peut que enquêter sur les auteurs de menace qui se mobilisent contre la violence. En d’autres mots, les interventions surviennent souvent lorsque « le mal est fait. »\n'+
+                    '\nEn plein dans un backlash\n\n'+
+                    '\nDans son livre de 1991, Backlash: The undeclared War Against American Women, Susan Faludi crée le concept du «backlash », que l’on peut traduire comme étant le « retour du bâton ». Selon elle, une partie de la société réagit violemment en réaction au progrès des droits des femmes, mais aussi stratégiquement. Elle ajoute d’ailleurs que ce qui unit les femmes, c’est l’oppression. Aujourd’hui, il nous apparaît clair que nous sommes dans une période de backlash et que la stratégie en ligne à travers la manosphère est d’autant plus violente. Il suffit de regarder la réélection du président Donald Trump ou même la controverse autour du document Alpha si on cherche des illustrations de ce phénomène.\n'+
+                    '\nL’oppression dans toutes ses formes est l’une des causes des VCS. Les influences culturelles, l’honneur familial, l’idéal de la famille, les normes sociales et la culture du viol sont tous des éléments pouvant expliquer l’ampleur des VCS. Or, l’oppression envers les femmes, particulièrement les femmes de couleur, est à son paroxysme lors d’un moment de backlash. Le racisme et le sexisme sont des luttes qui sont indissociables. Au Canada, les personnes vivant dans des communautés rurales, les nouvelles arrivantes ainsi que les femmes racisées sont beaucoup plus à risque de subir des VCS selon un rapport de la ministre de la condition féminine. Quant à elles, environ 25% à 50% des femmes autochtones seraient victimes de VCS au Québec, et ce, avant même d’atteindre la majorité. Ainsi, pour mener une lutte contre ce backlash et contre l’oppression des femmes, il est nécessaire de questionner les biais de notre système judiciaire. Le travail de sensibilisation et d’éducation doit commencer au sein-même de nos institutions judiciaires, qu’il s’agisse de la police, de la magistrature et même des facultés d’enseignement en droit. \n'+
+                    '\nDepuis son avènement, le concept de backlash fait l’objet d’une évolution globalisée. Introduite au courant des années 90 dans un contexte américain, la notion de backlash anti-féministe laisse désormais sa marque à l’échelle mondiale, s’imposant comme un phénomène de régression globale des plus préoccupants. Exacerbé dans des pays tel l\'Afghanistan, dont le bouleversant déclin des droits des femmes ne cesse de s’aggraver, le backlash frappe tout de même à notre porte, comme l’illustre l’alarmante menace pesant sur nos droits reproductifs. \n'+
+                    '\nComment sommes-nous arrivés à un tel retour en arrière ?\n\n'+
+                    'Selon l’article Understanding Gender Backlash: Southern Perspectives de la revue IDS Bulletin, la nouvelle vague serait due à un amalgame de résurgence religieuse, d’essor de l’autoritarisme et d\'hypernationalismes populistes, phénomènes dangereux pour nos démocraties. Par ailleurs, l’épisode actuel freinant le momentum des avancées féministes a ceci de particulier qu’il est indéniablement lié au rôle amplificateur et polarisateur des réseaux sociaux, permettant aux acteurs autrefois passifs de prendre activement part au mouvement réactionnaire.\n'+
+                    '\nRéduire les effets de la misogynie\n'+
+                    '\nCette réalité souligne l’importance de sensibiliser aux dangers de la radicalisation et de contrer celle-ci par des ressources de santé mentale et des groupes de soutien pour ceux qui se sentent isolés ou en colère. Ouvrir des espaces de dialogue demeure une solution viable, mais le mieux est de prévenir ce danger avec une éducation qui s’oriente davantage sur l’intelligence émotionnelle et les stéréotypes sur les genres. Au Canada, des organisme comme Next Gen Men s’engagent à redéfinir la masculinité tout en visant à détruire sa définition patriarcale pour prévenir toute forme de violence et tendre vers une société éclairée.\n'+
+                    '\nIl nous incombe ainsi de lutter contre cette vague de backlash en pavant la voie vers l’épanouissement d’un féminisme intersectionnel, des combats indissociables de la sauvegarde d’une démocratie saine et exempte de démagogie politique et religieuse. ',
+        },
+        {
+            id: 3,
             title: 'Montée des idéologies de droite ; qu’est-ce que cela signifie pour les droits des femmes ?\n',
             image: '/images/blogs/coloredWomen.jpg',
             author: 'Lina Tourabi',
@@ -24,7 +66,7 @@ export function ArticlesProvider({ children }) {
                 'Lorsque cette autonomisation est compromise, les femmes se voient déléguer moins de pouvoir sur le marché du travail, dans les espaces de débat et même au sein de la famille. Promouvoir l\'éducation, la formation et le développement professionnel des femmes est un objectif que l’ONU s’engage à faire appliquer et cette émancipation est un facteur clé pour mettre fin aux disparités économiques et aux inégalités de genre. La Banque Mondiale rapporte qu’à l’échelle mondiale, la participation des femmes au marché du travail a diminué, passant de 51 % en 2000 à 48 % en 2019. Avec la montée des idéologies de droite, cet enjeu est d’autant plus d’actualité.\n',
         },
         {
-            id: 2,
+            id: 4,
             title: 'Elles Investies',
             image: '/images/blogs/elles.png',
             author: 'Élie Legault',
@@ -33,7 +75,7 @@ export function ArticlesProvider({ children }) {
             content: '« 82% des femmes s’en remettent à leur conjoint pour la gestion de leurs finances. […] Seulement une femme sur quatre possède des placements à la Bourse. »<p></p><p>C’est ce que M Karman Kong nous dévoile dans son best-seller Elle investit. Alors que les hommes entendent parler d’investissements dès leur plus jeune âge, les femmes elles sont poussées à l’éviter, construisant éventuellement une réticence de ce sujet qui semble hors de portée. Kong se dédie à aider les femmes autour du monde à apprendre comment investir de façon accessible et simple, et utilise son livre comme canal de savoir. Le ton convivial et amical de l\'oeuvre permet aux lectrices de sentir une certaine proximité avec Kong, comme s’il s’agissait d’une conversation entre des amies. Se faisant, l’autrice participe à outiller les femmes dans le monde de l’investissement et à réduire l’écart de rémunération homme-femme.</p><p>Dans ses débuts, Karman Kong crée une page Instagram, dédiée à construire une communauté de femmes qui s’intéressent à la finance, de femmes qui pourraient s’entraider à naviguer le vaste système de l’investissement. Se faisant, elle rend un sujet habituellement effrayant et inconnu plus accessible, démystifié et même amusant. Sa page Instagram, créée en 2021, a aujourd’hui plus de 48 000 abonnés et accompagne les femmes dans leur cheminement financier! On y voit passer des icons de la culture populaire féminine comme Elle Woods, Barbie, Lizzo et bien d’autres. Bien qu’elle se concentre principalement sur l’investissement, la page aborde une vaste étendue de sujets comme les élections, la psychologie, les régimes de protection, des entreprises en plein essor, et bien d’autres!</p><p>Le livre de Karman Kong est exhaustif et explore le monde financier de A à Z. Que ce soit pour se débarrasser de ses dettes ou bien pour savoir où, comment et quand investir ou épargner, l’autrice vous accompagne à chaque étape de votre parcours. Elle explore le sujet sous ses volets chiffrés et théoriques, mais aussi psychologiques et sociaux. Son œuvre est à la fois une réflexion critique de la société et un guide réussi.</p>',
         },
         {
-            id: 3,
+            id: 5,
             title: 'Journée internationale des droits de la femme',
             image: '/images/blogs/jour.png',
             author: 'Élie Legault',
@@ -42,7 +84,7 @@ export function ArticlesProvider({ children }) {
             content: 'En cette journée internationale des droits de la femme, nous vous partageons les grandes lignes du parcours ardu qu’a pris l’évolution des droits des Canadiennes. En passant par différentes vagues d’un féminisme à plusieurs facettes, grâce aux efforts des Suffragettes, de groupes activistes de femmes Autochtones, la montée du féminisme noir et biens d’autres acteurs ou mouvements sociaux marquants, nous sommes aujourd’hui un peu plus proche d’une égalité fondamentale.',
         },
         {
-            id: 4,
+            id: 6,
             title: 'La marche annuelle commémorative pour les femmes autochtones disparues',
             image: '/images/blogs/marche.png',
             author: 'Élie Legault',
@@ -75,7 +117,7 @@ export function ArticlesProvider({ children }) {
                 'Ce rapport a éveillé plusieurs personnes aux atrocités que vivent les communautés autochtones et légitimer les revendications des mouvements comme MMIW, mais il ne fait que marquer le début du long chemin qu’il reste encore à faire. Nous vous invitons donc à prendre cette journée pour discuter avec vos proches, échanger et vous sensibiliser à la menace qui guette les communautés autochtones. ',
         },
         {
-            id: 5,
+            id: 7,
             title: 'Polytechnique, l’histoire d’un drame, mais aussi l’histoire de leurs vies',
             image: '/images/blogs/poly.png',
             author: 'Élie Legault',
@@ -169,7 +211,7 @@ export function ArticlesProvider({ children }) {
                 'C’était la plus jeune victime de Lépine et, 8 ans après le drame, vous pouviez entrer dans sa chambre encore intouchée, comme si cette fameuse journée n’avait jamais eu lieu. Emportés par le chagrin, ses parents ont gardé les quartiers de leur fille identiques, prêt pour le retour de celle-ci. Ils retrouvent d’ailleurs dans ses choses une lettre écrite par la jeune fille du haut de ses 17 ans : « Je n\'ai pas peur de la mort, j\'ai peur des souffrances qui l\'entourent. J\'espère de mourir dans une sorte d\'accident, en pleine action ». Les parents d’Annie trouvent consolation en se disant que leur fille les a quittés comme elle le voulait. De son vivant, Annie enseignait la natation à des enfants et poursuivait ses études en génie métallurgique dans le but d’éventuellement utiliser ses apprentissages dans sa lutte pour l’environnement.',
         },
         {
-            id: 6,
+            id: 8,
             title: 'Journée internationale pour l\'élimination de la violence à l\'égard des femmes',
             image: '/images/blogs/inter.png',
             author: 'Élie Legault',
@@ -195,7 +237,7 @@ export function ArticlesProvider({ children }) {
                 'D’autre part, le 26 novembre 2021 est adopté à l’unanimité par l’Assemblée nationale le projet de loi 92. Il vise la création d’un tribunal spécialisé en matière de violence sexuelle et de violence conjugale.  Ce projet est adopté à la suite des recommandations du rapport Rebâtir la confiance, rédigé par le Comité d’experts sur l’accompagnement des personnes victimes d’agressions sexuelles et de violence conjugale. C’est un autre exemple de progrès pour la sécurité des femmes dont, nous l’espérons, le fruit se fera sentir sous peu.',
         },
         {
-            id: 7,
+            id: 9,
             title: '3 bonnes nouvelles pour le mouvement féministe',
             image: '/images/blogs/trois.png',
             author: 'Élie Legault',
@@ -224,7 +266,7 @@ export function ArticlesProvider({ children }) {
                 'Une bonne nouvelle pour la représentation de femmes dans les hautes sphères juridiques : une majorité de femmes siège à la Cour suprême pour la première fois de son histoire. La juge Moreau, une francophone qui était juge en chef de la Cour du Banc du Roi de l’Alberta, devient la cinquième juge femme à la Cour suprême du Canada. C’est non seulement une marque importante dans l’histoire du féminisme canadien, mais aussi un évènement important pour les communautés francophones au Canada. En effet, Mary Moreau porte à cœur l’accès aux services juridiques en français et a notamment participé à la fondation de l’Association des juristes d’expression française de l’Alberta. ',
         },
         {
-            id: 8,
+            id: 10,
             title: 'Le coût de la Guerre pour les femmes',
             image: '/images/blogs/guerre.png',
             author: 'Élie Legault',
