@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <ArticlesProvider>
             <Component {...pageProps} />
+            <Analytics />
         </ArticlesProvider>
     );
 }
