@@ -27,7 +27,7 @@ export default async function handler(req, res) {
             // Send email using Nodemailer
             await transporter.sendMail({
                 from: email,
-                to: 'lucas.pentlandhyde@gmail.com',
+                to: 'femmesetdroit.udem@gmail.com',
                 subject: objet,
                 text: emailContent,
             });
