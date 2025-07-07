@@ -1,16 +1,29 @@
-import { ArticlesProvider, useArticles } from '../context/ArticlesContext';
+import { useEffect, useState } from 'react';
+import { useArticles } from '../context/ArticlesContext';
 import ArticleCard from '../components/ArticleCard';
-import Navbar from "../components/navbar";
+import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
-import SponsorsBar from "../components/Sponsors";
+import SponsorsBar from '../components/Sponsors';
 import Head from 'next/head';
-import React from "react";
 
 export default function Blog() {
     const { articles } = useArticles();
-    console.log('Articles:', articles); // Debugging line
+    const [posts, setPosts] = useState([]);
 
-    if (!articles || articles.length === 0) {
+    useEffect(() => {
+        async function load() {
+            const res = await fetch('/api/posts');
+            if (res.ok) {
+                const data = await res.json();
+                setPosts([...articles, ...data]);
+            } else {
+                setPosts(articles);
+            }
+        }
+        load();
+    }, [articles]);
+
+    if (!posts || posts.length === 0) {
         return <p>No articles found</p>;
     }
 
@@ -23,7 +36,7 @@ export default function Blog() {
             </Head>
             <Navbar/>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articles.map((article) => (
+                {posts.map((article) => (
                     <ArticleCard key={article.id} article={article} isLarge={true}/>
                 ))}
             </div>
