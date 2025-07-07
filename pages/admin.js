@@ -1,0 +1,79 @@
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
+export default function Admin() {
+  const router = useRouter();
+  const [posts, setPosts] = useState([]);
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    if (!document.cookie.includes('admin-auth=true')) {
+      router.push('/login');
+    } else {
+      fetchPosts();
+    }
+  }, []);
+
+  const fetchPosts = async () => {
+    const res = await fetch('/api/posts');
+    if (res.ok) {
+      const data = await res.json();
+      setPosts(data);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    const res = await fetch('/api/posts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, content }),
+    });
+    if (res.ok) {
+      const post = await res.json();
+      setPosts((p) => [...p, post]);
+      setTitle('');
+      setContent('');
+    } else if (res.status === 401) {
+      router.push('/login');
+    } else {
+      setError('Error saving post');
+    }
+  };
+
+  return (
+    <div className="p-4 max-w-2xl mx-auto">
+      <h1 className="text-xl font-bold mb-4">Create Post</h1>
+      {error && <p className="text-red-500">{error}</p>}
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-2 mb-4">
+        <input
+          className="border p-2"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+        />
+        <textarea
+          className="border p-2"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder="Content"
+        />
+        <button className="bg-blue-500 text-white p-2" type="submit">
+          Save
+        </button>
+      </form>
+
+      <h2 className="text-lg font-semibold mb-2">Existing Posts</h2>
+      <ul>
+        {posts.map((p) => (
+          <li key={p.id} className="mb-2">
+            <strong>{p.title}</strong>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
