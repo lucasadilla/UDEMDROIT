@@ -1,5 +1,16 @@
-import { parse } from 'cookie';
 import clientPromise from '../../../lib/mongodb';
+
+function parseCookies(header) {
+  const list = {};
+  if (!header) return list;
+  header.split(';').forEach((cookie) => {
+    const [name, ...rest] = cookie.trim().split('=');
+    if (!name) return;
+    const value = rest.join('=');
+    list[decodeURIComponent(name)] = decodeURIComponent(value);
+  });
+  return list;
+}
 
 export default async function handler(req, res) {
   const client = await clientPromise;
@@ -13,7 +24,7 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    const cookies = parse(req.headers.cookie || '');
+    const cookies = parseCookies(req.headers.cookie || '');
     if (cookies['admin-auth'] !== 'true') {
       return res.status(401).json({ message: 'Unauthorized' });
     }
