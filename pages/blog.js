@@ -8,7 +8,8 @@ import Head from 'next/head';
 
 export default function Blog() {
     const { articles } = useArticles();
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function load() {
@@ -19,9 +20,14 @@ export default function Blog() {
             } else {
                 setPosts(articles);
             }
+            setLoading(false);
         }
         load();
     }, [articles]);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     if (!posts || posts.length === 0) {
         return <p>No articles found</p>;

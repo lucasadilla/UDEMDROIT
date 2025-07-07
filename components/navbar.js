@@ -52,6 +52,11 @@ export default function Navbar() {
                         <span className={`nav-link text-black ${isActive('/guide') ? 'underline font-bold' : ''}`}>Guide des commanditaires</span>
                     </Link>
                 </li>
+                <li>
+                    <Link href="/login">
+                        <span className={`nav-link text-black ${isActive('/login') ? 'underline font-bold' : ''}`}>Admin</span>
+                    </Link>
+                </li>
             </ul>
             <a
                 href="https://www.instagram.com/femmesetdroit/"
