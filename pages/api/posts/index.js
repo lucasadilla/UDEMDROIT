@@ -1,13 +1,15 @@
-import fs from 'fs';
-import path from 'path';
 import { parse } from 'cookie';
+import clientPromise from '../../../lib/mongodb';
 
-const postsFile = path.join(process.cwd(), 'data', 'posts.json');
+export default async function handler(req, res) {
+  const client = await clientPromise;
+  const db = client.db();
+  const collection = db.collection('posts');
 
-export default function handler(req, res) {
   if (req.method === 'GET') {
-    const posts = JSON.parse(fs.readFileSync(postsFile, 'utf8'));
-    return res.status(200).json(posts);
+    const posts = await collection.find({}).toArray();
+    const mapped = posts.map((p) => ({ ...p, id: p._id }));
+    return res.status(200).json(mapped);
   }
 
   if (req.method === 'POST') {
@@ -16,16 +18,14 @@ export default function handler(req, res) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
     const { title, content } = req.body;
-    const posts = JSON.parse(fs.readFileSync(postsFile, 'utf8'));
     const newPost = {
-      id: Date.now(),
       title,
       content,
       date: new Date().toISOString(),
     };
-    posts.push(newPost);
-    fs.writeFileSync(postsFile, JSON.stringify(posts, null, 2));
-    return res.status(201).json(newPost);
+    const result = await collection.insertOne(newPost);
+    newPost._id = result.insertedId;
+    return res.status(201).json({ ...newPost, id: newPost._id });
   }
 
   return res.status(405).end();
