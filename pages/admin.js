@@ -6,6 +6,10 @@ export default function Admin() {
   const [posts, setPosts] = useState([]);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [author, setAuthor] = useState('');
+  const [date, setDate] = useState('');
+  const [authorImage, setAuthorImage] = useState('');
+  const [image, setImage] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -24,19 +28,37 @@ export default function Admin() {
     }
   };
 
+  const handleFile = (file, setter) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onloadend = () => setter(reader.result);
+    reader.readAsDataURL(file);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     const res = await fetch('/api/posts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, content }),
+      body: JSON.stringify({
+        title,
+        content,
+        author,
+        date,
+        authorImage,
+        image,
+      }),
     });
     if (res.ok) {
       const post = await res.json();
       setPosts((p) => [...p, post]);
       setTitle('');
       setContent('');
+      setAuthor('');
+      setDate('');
+      setAuthorImage('');
+      setImage('');
     } else if (res.status === 401) {
       router.push('/login');
     } else {
@@ -60,6 +82,30 @@ export default function Admin() {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="Content"
+        />
+        <input
+          className="border p-2"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          placeholder="Author"
+        />
+        <input
+          className="border p-2"
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+        <input
+          className="border p-2"
+          type="file"
+          accept="image/*"
+          onChange={(e) => handleFile(e.target.files[0], setAuthorImage)}
+        />
+        <input
+          className="border p-2"
+          type="file"
+          accept="image/*"
+          onChange={(e) => handleFile(e.target.files[0], setImage)}
         />
         <button className="bg-blue-500 text-white p-2" type="submit">
           Save
