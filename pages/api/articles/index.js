@@ -14,14 +14,14 @@ function parseCookies(header) {
 
 export default async function handler(req, res) {
   const client = await clientPromise;
-  const db = client.db();
-  const collection = db.collection('posts');
+  const db = client.db('udemdroit');
+  const collection = db.collection('articles');
 
   if (req.method === 'GET') {
-    const posts = await collection.find({}).toArray();
-    const mapped = posts.map((p) => ({
-      ...p,
-      id: p._id.toString(),
+    const articles = await collection.find({}).toArray();
+    const mapped = articles.map((a) => ({
+      ...a,
+      id: a._id.toString(),
     }));
     return res.status(200).json(mapped);
   }
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       return res.status(401).json({ message: 'Unauthorized' });
     }
     const { title, content, author, date, authorImage, image } = req.body;
-    const newPost = {
+    const newArticle = {
       title,
       content,
       author,
@@ -40,14 +40,11 @@ export default async function handler(req, res) {
       authorImage,
       image,
     };
-    const result = await collection.insertOne(newPost);
-    // Ensure the returned post has a string id so the frontend can use it directly
-    return res
-      .status(201)
-      .json({
-        ...newPost,
-        id: result.insertedId.toString(),
-      });
+    const result = await collection.insertOne(newArticle);
+    return res.status(201).json({
+      ...newArticle,
+      id: result.insertedId.toString(),
+    });
   }
 
   return res.status(405).end();
