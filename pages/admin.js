@@ -21,7 +21,9 @@ export default function Admin() {
   }, []);
 
   const fetchPosts = async () => {
-    const res = await fetch('/api/posts');
+    const res = await fetch('/api/posts', {
+      credentials: 'include',
+    });
     if (res.ok) {
       const data = await res.json();
       setPosts(data);
@@ -41,6 +43,7 @@ export default function Admin() {
     const res = await fetch('/api/posts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({
         title,
         content,
