@@ -7,16 +7,19 @@ export default function Admin() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
+  const [authorId, setAuthorId] = useState('');
   const [date, setDate] = useState('');
   const [authorImage, setAuthorImage] = useState('');
   const [image, setImage] = useState('');
   const [error, setError] = useState('');
+  const [authors, setAuthors] = useState([]);
 
   useEffect(() => {
     if (!document.cookie.includes('admin-auth=true')) {
       router.push('/login');
     } else {
       fetchPosts();
+      fetchAuthors();
     }
   }, []);
 
@@ -27,6 +30,14 @@ export default function Admin() {
     if (res.ok) {
       const data = await res.json();
       setPosts(data);
+    }
+  };
+
+  const fetchAuthors = async () => {
+    const res = await fetch('/api/users');
+    if (res.ok) {
+      const data = await res.json();
+      setAuthors(data);
     }
   };
 
@@ -59,6 +70,7 @@ export default function Admin() {
       setTitle('');
       setContent('');
       setAuthor('');
+      setAuthorId('');
       setDate('');
       setAuthorImage('');
       setImage('');
@@ -86,23 +98,37 @@ export default function Admin() {
           onChange={(e) => setContent(e.target.value)}
           placeholder="Content"
         />
-        <input
-          className="border p-2"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-          placeholder="Author"
-        />
+        <div className="flex items-center space-x-2">
+          <select
+            className="border p-2 flex-1"
+            value={authorId}
+            onChange={(e) => {
+              const selected = authors.find((u) => u.id === e.target.value);
+              setAuthorId(e.target.value);
+              setAuthor(selected ? selected.name : '');
+              setAuthorImage(selected ? selected.profilePicture : '');
+            }}
+          >
+            <option value="">Select Author</option>
+            {authors.map((u) => (
+              <option key={u.id} value={u.id}>
+                {u.name}
+              </option>
+            ))}
+          </select>
+          {authorImage && (
+            <img
+              src={authorImage}
+              alt={author}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+          )}
+        </div>
         <input
           className="border p-2"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-        />
-        <input
-          className="border p-2"
-          type="file"
-          accept="image/*"
-          onChange={(e) => handleFile(e.target.files[0], setAuthorImage)}
         />
         <input
           className="border p-2"
