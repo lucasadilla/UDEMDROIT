@@ -15,10 +15,6 @@ export default function Blog() {
         setIsAdmin(document.cookie.includes('admin-auth=true'));
     }, []);
 
-    if (!articles || articles.length === 0) {
-        return <p>No articles found</p>;
-    }
-
     return (
         <div>
             <Head>
