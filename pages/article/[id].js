@@ -15,7 +15,7 @@ export default function Article() {
 
     useEffect(() => {
         if (!article && id) {
-            fetch('/api/posts')
+            fetch('/api/articles')
                 .then((res) => res.json())
                 .then((data) => {
                     const found = data.find((p) => String(p.id) === id);

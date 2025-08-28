@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { useArticles } from '../context/ArticlesContext';
 
 export default function Admin() {
   const router = useRouter();
-  const [posts, setPosts] = useState([]);
+  const { setArticles } = useArticles();
+  const [articles, setLocalArticles] = useState([]);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
@@ -16,17 +18,18 @@ export default function Admin() {
     if (!document.cookie.includes('admin-auth=true')) {
       router.push('/login');
     } else {
-      fetchPosts();
+      fetchArticles();
     }
   }, []);
 
-  const fetchPosts = async () => {
-    const res = await fetch('/api/posts', {
+  const fetchArticles = async () => {
+    const res = await fetch('/api/articles', {
       credentials: 'include',
     });
     if (res.ok) {
       const data = await res.json();
-      setPosts(data);
+      setLocalArticles(data);
+      setArticles(data);
     }
   };
 
@@ -40,7 +43,7 @@ export default function Admin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    const res = await fetch('/api/posts', {
+    const res = await fetch('/api/articles', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
@@ -54,8 +57,9 @@ export default function Admin() {
       }),
     });
     if (res.ok) {
-      const post = await res.json();
-      setPosts((p) => [...p, post]);
+      const article = await res.json();
+      setLocalArticles((p) => [...p, article]);
+      setArticles((p) => [...p, article]);
       setTitle('');
       setContent('');
       setAuthor('');
@@ -65,13 +69,13 @@ export default function Admin() {
     } else if (res.status === 401) {
       router.push('/login');
     } else {
-      setError('Error saving post');
+      setError('Error saving article');
     }
   };
 
   return (
     <div className="p-4 max-w-2xl mx-auto">
-      <h1 className="text-xl font-bold mb-4">Create Post</h1>
+      <h1 className="text-xl font-bold mb-4">Create Article</h1>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit} className="flex flex-col space-y-2 mb-4">
         <input
@@ -133,11 +137,11 @@ export default function Admin() {
         </button>
       </form>
 
-      <h2 className="text-lg font-semibold mb-2">Existing Posts</h2>
+      <h2 className="text-lg font-semibold mb-2">Existing Articles</h2>
       <ul>
-        {posts.map((p) => (
-          <li key={p.id} className="mb-2">
-            <strong>{p.title}</strong>
+        {articles.map((a) => (
+          <li key={a.id} className="mb-2">
+            <strong>{a.title}</strong>
           </li>
         ))}
       </ul>
