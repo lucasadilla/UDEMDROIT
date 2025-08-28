@@ -10,13 +10,8 @@ import React from "react";
 
 export default function Home() {
     const { articles } = useArticles();
-    console.log('Articles:', articles); // Debugging line
 
-    if (!articles || articles.length === 0) {
-        return <p>No articles found</p>;
-    }
-
-    const topThreeArticles = articles.slice(0, 3);
+    const topThreeArticles = (articles ?? []).slice(0, 3);
 
     return (
         <div>
