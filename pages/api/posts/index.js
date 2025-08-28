@@ -19,7 +19,10 @@ export default async function handler(req, res) {
 
   if (req.method === 'GET') {
     const posts = await collection.find({}).toArray();
-    const mapped = posts.map((p) => ({ ...p, id: p._id }));
+    const mapped = posts.map((p) => ({
+      ...p,
+      id: p._id.toString(),
+    }));
     return res.status(200).json(mapped);
   }
 
@@ -28,11 +31,14 @@ export default async function handler(req, res) {
     if (cookies['admin-auth'] !== 'true') {
       return res.status(401).json({ message: 'Unauthorized' });
     }
-    const { title, content } = req.body;
+    const { title, content, author, date, authorImage, image } = req.body;
     const newPost = {
       title,
       content,
-      date: new Date().toISOString(),
+      author,
+      date,
+      authorImage,
+      image,
     };
     const result = await collection.insertOne(newPost);
     newPost._id = result.insertedId;
