@@ -41,8 +41,13 @@ export default async function handler(req, res) {
       image,
     };
     const result = await collection.insertOne(newPost);
-    newPost._id = result.insertedId;
-    return res.status(201).json({ ...newPost, id: newPost._id });
+    // Ensure the returned post has a string id so the frontend can use it directly
+    return res
+      .status(201)
+      .json({
+        ...newPost,
+        id: result.insertedId.toString(),
+      });
   }
 
   return res.status(405).end();
