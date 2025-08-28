@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     const mapped = users.map((u) => ({
       id: u._id.toString(),
       name: u.name,
+      title: u.title,
       profilePicture: u.profilePicture,
     }));
     return res.status(200).json(mapped);
