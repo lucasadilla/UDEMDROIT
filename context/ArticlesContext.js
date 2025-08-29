@@ -5,23 +5,24 @@ const ArticlesContext = createContext();
 export function ArticlesProvider({ children }) {
   const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetch('/api/articles');
-        if (res.ok) {
-          const data = await res.json();
-          setArticles(data);
-        }
-      } catch (err) {
-        console.error('Failed to load articles', err);
+  const refreshArticles = async () => {
+    try {
+      const res = await fetch('/api/articles');
+      if (res.ok) {
+        const data = await res.json();
+        setArticles(data);
       }
+    } catch (err) {
+      console.error('Failed to load articles', err);
     }
-    load();
+  };
+
+  useEffect(() => {
+    refreshArticles();
   }, []);
 
   return (
-    <ArticlesContext.Provider value={{ articles, setArticles }}>
+    <ArticlesContext.Provider value={{ articles, refreshArticles, setArticles }}>
       {children}
     </ArticlesContext.Provider>
   );
